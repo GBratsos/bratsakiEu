@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+footer,
+.gradient-bg {
+  background: linear-gradient(323deg, rgba(3, 3, 3, 1) 0%, rgba(1, 21, 42, 1) 100%);
+}
+
+.arrow-down {
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  animation: arrow 0.5s 1s infinite ease-out alternate;
+}
+
+.left {
+  position: absolute;
+  height: 8px;
+  width: 30px;
+  background: #02fcff;
+  transform: rotate(240deg);
+  top: 10px;
+  left: 10px;
+  border-radius: 4px;
+  transform-origin: 3px 50%;
+  animation: leftArrow 0.5s 1s infinite ease-out alternate;
+}
+
+.right {
+  position: absolute;
+  height: 8px;
+  width: 30px;
+  background: #02fcff;
+  transform: rotate(-60deg);
+  top: 10px;
+  left: 10px;
+  border-radius: 4px;
+  transform-origin: 3px 50%;
+  animation: rightArrow 0.5s 1s infinite ease-out alternate;
+}
+
+@keyframes arrow {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -10px;
+  }
+}
+
+@keyframes leftArrow {
+  0% {
+  }
+  100% {
+    transform: rotate(225deg);
+  }
+}
+
+@keyframes rightArrow {
+  0% {
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+.button {
+  position: relative;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 56px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  text-indent: -20px;
+}
+
+.button:hover svg {
+  opacity: 1;
+}
+
+.section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.biography::after,
+.section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.9;
+}
+
+.podcast-section::after,
+.biography::after {
+  background-color: #0f2247;
+}
+
+.rallydiaries-section::after {
+  background-color: #f9ca00;
+}
+
+.bratsaki-gallery::after,
+.simracing-section::after {
+  background-color: #fe2243;
+  opacity: 0.8;
+}
+
+.blogpost-card a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
