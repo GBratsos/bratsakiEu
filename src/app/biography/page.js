@@ -222,7 +222,13 @@ export default function Biography() {
             </motion.p>
           </div>
           <div className='relative py-40 lg:py-0'>
-            <Image loading='lazy' src='/omae-2023-1.webp' alt='' priority fill className='object-cover' />
+            <Image
+              loading='lazy'
+              src='/omae-2023-1.webp'
+              alt='OMAE 2023 hillclimb championship'
+              fill
+              className='object-cover'
+            />
           </div>
         </motion.div>
       </section>
