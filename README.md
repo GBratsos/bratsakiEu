@@ -1,2 +1,3 @@
-# bratsakiEu
-Personal Website
+# bratsaki.eu
+
+Personal website built with NextJS.
