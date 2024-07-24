@@ -8,6 +8,7 @@ import {
   faViber,
   faYoutube,
   faXTwitter,
+  faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
@@ -340,9 +341,9 @@ export default function Footer() {
                 [faTiktok, 'https://tiktok.com/@bratsaki', 'TikTok'],
                 [faYoutube, 'https://www.youtube.com/rallydiaries?sub_confirmation=1', 'YouTube'],
                 [faFacebookSquare, 'https://fb.com/geobratsos', 'Facebook'],
+                [faLinkedin, 'https://www.linkedin.com/in/george-bratsos/', 'LinkedIn'],
                 [faDiscord, 'https://rallydiaries.eu/discord', 'Discord'],
                 [faViber, 'https://rallydiaries.eu/viber', 'Viber'],
-                [faXTwitter, 'https://twitter.com/bratsaki', 'Twitter'],
               ].map(([fa, url, title]) => (
                 <a
                   href={url}
@@ -352,7 +353,7 @@ export default function Footer() {
                   aria-label={title}
                   className='flex items-center justify-center text-white hover:text-blue-100'
                 >
-                  <FontAwesomeIcon icon={fa} className='text-[23px]' />
+                  <FontAwesomeIcon icon={fa} className='h-[23px] text-[23px]' />
                 </a>
               ))}
             </nav>
