@@ -1,11 +1,42 @@
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faClose, faNewspaper, faPodcast, faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
+import { useState } from 'react'
+import SocialMedia from './socialMedia'
+import { motion } from 'framer-motion'
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      ease: 'easeInOut',
+      duration: 0.8,
+      delayChildren: 0.2,
+      staggerChildren: 0.4,
+    },
+  },
+}
+
+const opacityVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+  },
+}
 
 export default function Menu() {
+  const [isOpened, setIsOpened] = useState(false)
+
   return (
     <section className='menu-section flex items-center pt-[30px] lg:pt-[40px]'>
-      {/* <FontAwesomeIcon icon={faBars} className='mr-8 w-[30px] text-[30px]' /> */}
+      <FontAwesomeIcon
+        icon={faBars}
+        className='mr-8 w-[30px] cursor-pointer text-[30px]'
+        onClick={() => setIsOpened(!isOpened)}
+      />
       <Link href='/' aria-label='home'>
         <svg xmlns='http://www.w3.org/2000/svg' width='136' height='61' viewBox='0 0 136 61' fill='none'>
           <path
@@ -46,6 +77,49 @@ export default function Menu() {
           <path d='M42.2455 16.1871L49.6537 2.20369H33.7533L26.3271 16.1871H42.2455Z' fill='#E9E9E9' />
         </svg>
       </Link>
+
+      <div
+        className={`gradient-bg fixed left-0 top-0 z-50 h-full w-0 overflow-hidden bg-opacity-75 backdrop-blur-lg transition-all duration-300 ${isOpened ? 'w-[300px] lg:w-[360px]' : 'w-[0]'}`}
+      >
+        <div className='flex h-full w-full flex-col items-end justify-between px-6 py-8'>
+          <div className='flex w-full flex-col items-end'>
+            <FontAwesomeIcon
+              icon={faClose}
+              onClick={() => setIsOpened(false)}
+              className='z-30 w-[30px] cursor-pointer text-[30px]'
+              id='closeButton'
+            />
+
+            <motion.div
+              variants={container}
+              animate={isOpened ? 'show' : 'hidden'}
+              className='mt-6 flex w-full flex-col gap-y-1'
+            >
+              <motion.div variants={opacityVariant} className='px-4 py-3 text-white hover:text-blue-100'>
+                <Link href='/biography' className='text-lg font-bold'>
+                  <FontAwesomeIcon icon={faUser} className='mr-4 w-[24px] text-[24px]' />
+                  BIOGRAPHY
+                </Link>
+              </motion.div>
+              {/* <motion.div variants={opacityVariant} className='px-4 py-3 text-white hover:text-blue-100'>
+                <Link href='/podcast' className='text-lg font-bold'>
+                  <FontAwesomeIcon icon={faPodcast} className='mr-4 w-[24px] text-[24px]' />
+                  PODCAST
+                </Link>
+              </motion.div> */}
+              <motion.div variants={opacityVariant} className='px-4 py-3 text-white hover:text-blue-100'>
+                <Link href='/#news' onClick={() => setIsOpened(false)} className='text-lg font-bold'>
+                  <FontAwesomeIcon icon={faNewspaper} className='mr-4 w-[24px] text-[24px]' />
+                  NEWS
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+          <div className='mt-6 flex h-auto w-full flex-col items-center gap-y-1'>
+            <SocialMedia />
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

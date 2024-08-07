@@ -35,7 +35,7 @@ const articleVariants = {
 
 export default function LatestNews({ data }) {
   return (
-    <section className='news-section gradient-bg py-8 lg:py-16'>
+    <section className='news-section gradient-bg py-8 lg:py-16' id='news'>
       <div className='container mx-auto px-4'>
         <h2 className='mb-8 text-3xl font-bold text-blue-100 lg:mb-[40px] lg:text-5xl'>Latest News</h2>
 
