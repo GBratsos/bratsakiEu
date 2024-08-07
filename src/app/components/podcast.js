@@ -96,7 +96,6 @@ export default function Podcast() {
                   [faSpotify, 'https://spotify.com', 'Spotify'],
                   // [faYoutube, 'https://youtube.com/rallydiaries', 'YouTube'],
                   [faApple, 'https://applepodcasts.com', 'Apple Podcasts'],
-                  [faPodcast, 'https://tiktok.com/@bratsaki', 'Google Podcasts'],
                 ].map(([fa, url, title]) => (
                   <motion.a
                     href={url}

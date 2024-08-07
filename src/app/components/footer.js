@@ -338,7 +338,7 @@ export default function Footer() {
               {[
                 [faInstagram, 'https://instagram.com/bratsaki', 'Instagram'],
                 [faTwitch, 'https://twitch.tv/bratsaki', 'Twitch'],
-                [faTiktok, 'https://tiktok.com/@bratsaki', 'TikTok'],
+                [faTiktok, 'https://tiktok.com/@geobratsos', 'TikTok'],
                 [faYoutube, 'https://www.youtube.com/rallydiaries?sub_confirmation=1', 'YouTube'],
                 [faFacebookSquare, 'https://fb.com/geobratsos', 'Facebook'],
                 [faLinkedin, 'https://www.linkedin.com/in/george-bratsos/', 'LinkedIn'],
