@@ -13,7 +13,7 @@ import Link from 'next/link'
 
 export default function SocialMedia() {
   return (
-    <div className='max-w[275px] mt-10 w-full md:max-w-[205px]'>
+    <div className='max-w[275px] mt-10 w-full md:max-w-[205px] lg:mt-0'>
       <nav className='socials mx-auto grid grid-cols-4 grid-rows-2 gap-y-8'>
         {[
           [faInstagram, 'https://instagram.com/bratsaki', 'Instagram'],
