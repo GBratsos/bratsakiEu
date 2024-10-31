@@ -5,9 +5,7 @@ import Podcast from './components/podcast'
 import Simracing from './components/simracing'
 
 async function getData() {
-  const res = await fetch('https://rallydiaries.eu/en/rest/articles/bratsaki', { next: { revalidate: 3600 } })
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
+  const res = await fetch('https://rallydiaries.eu/en/rest/articles/bratsaki', { next: { revalidate: 60 } })
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
