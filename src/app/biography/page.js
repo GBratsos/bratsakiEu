@@ -59,7 +59,7 @@ export default function Biography() {
         initial='hidden'
         animate='show'
       >
-        <motion.div variants={topOpacityVariant} className='absolute bottom-0 right-0 top-0 lg:left-auto'>
+        <motion.div variants={topOpacityVariant} className='absolute bottom-0 right-0 top-0 z-10 lg:left-auto'>
           <Tilt
             borderRadius={0}
             spotGlareEnable={false}
@@ -113,7 +113,7 @@ export default function Biography() {
             <motion.div variants={topOpacityVariant} className='col-span-2'>
               <h3 className='relative text-xl text-blue-100'>From simracing to real rallies</h3>
             </motion.div>
-            <div className='relative'>
+            <div className='relative h-[30px]'>
               <div className='arrow-down left-auto right-0 lg:left-0'>
                 <div className='left'></div>
                 <div className='right'></div>

@@ -91,7 +91,7 @@ export default function HomeContent() {
           <motion.div variants={opacityVariant} className='col-span-2'>
             <h3 className='relative text-xl text-blue-100'>Sim racer & rally driver (in the making)</h3>
           </motion.div>
-          <div className='relative'>
+          <div className='relative h-[30px]'>
             <div className='arrow-down left-auto right-0 lg:left-0'>
               <div className='left'></div>
               <div className='right'></div>

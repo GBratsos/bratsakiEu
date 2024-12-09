@@ -135,3 +135,22 @@ footer,
   bottom: 0;
   right: 0;
 }
+
+.podcast-links {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  background-color: rgba(254, 34, 67, 0.9);
+  opacity: 0;
+}
+
+.podcast-card:hover .podcast-links {
+  opacity: 1;
+}

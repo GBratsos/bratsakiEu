@@ -101,12 +101,12 @@ export default function Menu() {
                   BIOGRAPHY
                 </Link>
               </motion.div>
-              {/* <motion.div variants={opacityVariant} className='px-4 py-3 text-white hover:text-blue-100'>
+              <motion.div variants={opacityVariant} className='px-4 py-3 text-white hover:text-blue-100'>
                 <Link href='/podcast' className='text-lg font-bold'>
                   <FontAwesomeIcon icon={faPodcast} className='mr-4 w-[24px] text-[24px]' />
                   PODCAST
                 </Link>
-              </motion.div> */}
+              </motion.div>
               <motion.div variants={opacityVariant} className='px-4 py-3 text-white hover:text-blue-100'>
                 <Link href='/#news' onClick={() => setIsOpened(false)} className='text-lg font-bold'>
                   <FontAwesomeIcon icon={faNewspaper} className='mr-4 w-[24px] text-[24px]' />

@@ -1,11 +1,11 @@
 'use client'
 
-import { faApple, faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { faAngleRight, faPodcast } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import PodcastLinks from './podcastLinks'
 
 const PODCAST_VARIANTS = {
   offscreen: {},
@@ -78,11 +78,10 @@ export default function Podcast() {
             </motion.div>
           </div>
           <div>
-            <h3 className='mb-16 text-center text-3xl font-black text-white'>COMING SOON</h3>
-            {/* <motion.div variants={buttonVariant}>
+            <motion.div variants={buttonVariant}>
               <Link
-                href='/podcasts'
-                className='button mb-8 mt-8 inline-flex items-center border-white px-[54px] py-[15px] font-black text-white hover:bg-white hover:text-red lg:mt-0 lg:w-[350px] lg:py-[22px]'
+                href='/podcast'
+                className='button my-8 inline-flex items-center border-white px-[54px] py-[15px] font-black text-white hover:bg-white hover:text-red lg:mt-12 lg:w-[350px] lg:py-[22px]'
               >
                 <span className='text-xl lg:text-[32px]'>ALL EPISODES</span>
                 <FontAwesomeIcon
@@ -90,28 +89,8 @@ export default function Podcast() {
                   className='absolute bottom-0 right-[30px] top-0 hidden h-full opacity-0 lg:ms-4 lg:inline-block lg:w-[30px]'
                 />
               </Link>
-            </motion.div> */}
-            <div>
-              <nav className='socials mx-auto flex max-w-[220px] flex-wrap items-center justify-between'>
-                {[
-                  [faSpotify, 'https://spotify.com', 'Spotify'],
-                  [faYoutube, 'https://www.youtube.com/rallydiaries/podcasts', 'YouTube'],
-                  [faApple, 'https://applepodcasts.com', 'Apple Podcasts'],
-                ].map(([fa, url, title]) => (
-                  <motion.a
-                    href={url}
-                    key={title}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    aria-label={title}
-                    className='text-white hover:text-blue-100'
-                    variants={opacityVariant}
-                  >
-                    <FontAwesomeIcon icon={fa} className='text-[52px]' />
-                  </motion.a>
-                ))}
-              </nav>
-            </div>
+            </motion.div>
+            <PodcastLinks />
           </div>
         </div>
       </motion.div>

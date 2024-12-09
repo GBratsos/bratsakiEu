@@ -56,7 +56,7 @@ export default function Simracing() {
                 href='https://linktr.ee/dirthellenic'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='underline'
+                className='underline hover:text-blue-100'
               >
                 DiRT Hellenic community
               </Link>
@@ -67,7 +67,12 @@ export default function Simracing() {
           <div>
             <motion.p variants={opacityVariant} className='mb-6 text-xl'>
               In 2018, George turned a long-held dream into reality by creating the&nbsp;
-              <Link href='https://rallydiaries.eu/en' target='_blank' rel='noopener noreferrer' className='underline'>
+              <Link
+                href='https://rallydiaries.eu/en'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='underline hover:text-blue-100'
+              >
                 RallyDiaries project
               </Link>
               &nbsp;and building a Peugeot 205 GTi with his father in their garage. Following various track tests,
