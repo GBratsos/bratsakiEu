@@ -35,7 +35,9 @@ const podcastVariants = {
   },
 }
 
-export default function Podcasts() {
+export default function Podcasts({ podcastData }) {
+  console.log(podcastData)
+
   return (
     <section className='news-section gradient-bg py-8 lg:py-16' id='news'>
       <div className='container mx-auto px-4'>
@@ -48,34 +50,25 @@ export default function Podcasts() {
           variants={container}
           viewport={{ amount: 0.2, once: true }}
         >
-          <motion.article
-            variants={podcastVariants}
-            className='podcast-card relative grid-flow-col rounded-3xl border-8 bg-white px-6 py-4 hover:border-red md:grid'
-          >
-            <div className='img-container mb-4 mr-4 sm:mb-0'>
-              <Image
-                loading='lazy'
-                src='/pedal-to-the-metal-without-tomorrow.webp'
-                width={160}
-                height={160}
-                alt='Pedal to the metal without tomorrow.'
-              />
-            </div>
-            <div>
-              <h2 className='max-h-13 mb-4 text-xl font-bold text-black'>
-                Pedal to the metal without tomorrow | George Bratsos
-              </h2>
-              <p className='text-black'>
-                Welcome to "Pedal to the metal without tomorrow" podcast.
-                <br />
-                George Bratsos a.k.a. Bratsaki shares his experiences from the world of simracing and motorsport, as
-                well as his passion for cars.
-              </p>
-            </div>
-            <div className='podcast-links'>
-              <PodcastLinks />
-            </div>
-          </motion.article>
+          {podcastData?.map((podcast) => (
+            <motion.article
+              key={podcast.title}
+              variants={podcastVariants}
+              className='podcast-card relative grid-flow-col rounded-3xl border-8 bg-white px-6 py-4 hover:border-red md:grid'
+            >
+              <div className='img-container mb-4 mr-4 sm:mb-0'>
+                <Image loading='lazy' src={podcast.image} width={160} height={160} alt={podcast.title} />
+              </div>
+              <div>
+                <h2 className='max-h-13 mb-4 text-xl font-bold text-black'>{podcast.title}</h2>
+                <p className='text-black'>{podcast.description}</p>
+                {podcast.description2 && <p className='text-black'>{podcast.description2}</p>}
+              </div>
+              <div className='podcast-links'>
+                <PodcastLinks />
+              </div>
+            </motion.article>
+          ))}
         </motion.div>
       </div>
     </section>

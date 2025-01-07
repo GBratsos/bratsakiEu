@@ -1,11 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import Menu from '../components/menu'
 import { motion } from 'framer-motion'
 import { Tilt } from 'react-next-tilt'
 import Podcasts from '../components/latestPodcasts'
+import podcastData from '../podcastData'
 
 const container = {
   offscreen: { opacity: 0 },
@@ -68,6 +68,8 @@ const podcastVariants = {
 }
 
 export default function Podcast() {
+  let podcasts = podcastData
+
   return (
     <section>
       <motion.section
@@ -152,7 +154,7 @@ export default function Podcast() {
           </div>
         </div>
       </motion.section>
-      <Podcasts />
+      <Podcasts podcastData={podcasts} />
     </section>
   )
 }
