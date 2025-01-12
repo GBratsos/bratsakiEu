@@ -52,14 +52,17 @@ const topOpacityVariant = {
 
 export default function Biography() {
   return (
-    <section className='section gradient-bg gradient-bg'>
+    <section className='gradient-bg overflow-x-hidden'>
       <motion.section
         className='homeContent-section relative pb-8 lg:pb-16'
         variants={topContainer}
         initial='hidden'
         animate='show'
       >
-        <motion.div variants={topOpacityVariant} className='absolute bottom-0 right-0 top-0 z-10 lg:left-auto'>
+        <motion.div
+          variants={topOpacityVariant}
+          className='absolute bottom-0 right-[-128px] top-0 md:right-0 lg:left-auto'
+        >
           <Tilt
             borderRadius={0}
             spotGlareEnable={false}

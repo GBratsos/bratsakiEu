@@ -56,12 +56,19 @@ export default function Podcasts({ podcastData }) {
               variants={podcastVariants}
               className='podcast-card relative grid-flow-col rounded-3xl border-8 bg-white px-6 py-4 hover:border-red md:grid'
             >
-              <div className='img-container mb-4 mr-4 sm:mb-0'>
-                <Image loading='lazy' src={podcast.image} width={160} height={160} alt={podcast.title} />
+              <div className='img-container mb-4 md:mb-0 md:mr-4'>
+                <Image
+                  loading='lazy'
+                  src={podcast.image}
+                  width={160}
+                  height={160}
+                  className='w-full md:w-[160px]'
+                  alt={podcast.title}
+                />
               </div>
               <div>
                 <h2 className='max-h-13 mb-4 text-xl font-bold text-black'>{podcast.title}</h2>
-                <p className='text-black'>{podcast.description}</p>
+                <h3 className='mb-4 text-black'>{podcast.description}</h3>
                 {podcast.description2 && <p className='text-black'>{podcast.description2}</p>}
               </div>
               <div className='podcast-links'>

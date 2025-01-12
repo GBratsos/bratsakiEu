@@ -31,7 +31,7 @@ export default function Menu() {
   const [isOpened, setIsOpened] = useState(false)
 
   return (
-    <section className='menu-section flex items-center pt-[30px] lg:pt-[40px]'>
+    <section className='menu-section xxl:static relative z-20 flex items-center pt-[30px] lg:pt-[40px]'>
       <FontAwesomeIcon
         icon={faBars}
         className='mr-8 w-[30px] cursor-pointer text-[30px]'
