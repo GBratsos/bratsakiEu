@@ -147,7 +147,7 @@ export default function Biography() {
                 2018, he realized his dream of racing a Peugeot 205 Maxi built in the family&apos;s garage.
               </motion.p>
             </div>
-            <motion.div variants={opacityVariant} className='relative py-40 lg:py-0'>
+            <motion.div variants={opacityVariant} className='relative py-40 lg:py-48'>
               <Image
                 loading='lazy'
                 src='/george-bratsos-mechanic.webp'
@@ -162,7 +162,7 @@ export default function Biography() {
             whileInView='onscreen'
             variants={container}
             viewport={{ amount: 0.35, once: true }}
-            className='mt-8 grid gap-8 lg:mt-32 lg:grid-cols-2'
+            className='mt-8 grid items-center gap-8 lg:mt-32 lg:grid-cols-2'
           >
             <motion.div variants={opacityVariant} className='relative order-last py-40 lg:order-first lg:py-0'>
               <Image
@@ -205,7 +205,7 @@ export default function Biography() {
             whileInView='onscreen'
             variants={container}
             viewport={{ amount: 0.35, once: true }}
-            className='mt-8 grid gap-8 lg:mt-32 lg:grid-cols-2'
+            className='mt-8 grid items-center gap-8 lg:mt-32 lg:grid-cols-2'
           >
             <div className='lg:mt-0 lg:py-8'>
               <motion.p variants={opacityVariant} className='mb-6 text-xl'>
@@ -227,7 +227,7 @@ export default function Biography() {
                 Hillclimb and secured several more podium finishes in other events throughout the year.
               </motion.p>
             </div>
-            <div className='relative py-40 lg:py-0'>
+            <div className='relative py-40 lg:py-48'>
               <Image
                 loading='lazy'
                 src='/peugeot-205-dimitsana-hillclimb.webp'
@@ -242,9 +242,9 @@ export default function Biography() {
             whileInView='onscreen'
             variants={container}
             viewport={{ amount: 0.35, once: true }}
-            className='mt-8 grid gap-8 lg:mt-32 lg:grid-cols-2'
+            className='mt-8 grid items-center gap-8 lg:mt-32 lg:grid-cols-2'
           >
-            <div className='relative order-last py-40 lg:order-first lg:py-0'>
+            <div className='relative order-last py-40 lg:order-first lg:py-44'>
               <Image
                 loading='lazy'
                 src='/speedcar-xtrem-george-bratsos.webp'
@@ -271,9 +271,9 @@ export default function Biography() {
             whileInView='onscreen'
             variants={container}
             viewport={{ amount: 0.35, once: true }}
-            className='mt-8 grid gap-8 lg:mt-32 lg:grid-cols-2'
+            className='mt-8 grid items-center gap-8 lg:mt-32 lg:grid-cols-2'
           >
-            <div className='lg:py-8'>
+            <div className='lg:py-12'>
               <motion.p variants={opacityVariant} className='mb-6 text-xl'>
                 In 2023, George participated in the National Hillclimb cup of southern Greece. After good results he
                 managed to win the National Hillclimb cup of southern Greece in his class.
@@ -289,7 +289,7 @@ export default function Biography() {
                 motorsport.
               </motion.p>
             </div>
-            <div className='relative py-40 lg:py-0'>
+            <div className='relative py-40 lg:py-64'>
               <Image
                 loading='lazy'
                 src='/omae-2023-1.webp'

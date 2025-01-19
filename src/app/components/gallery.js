@@ -46,7 +46,7 @@ export default function Gallery() {
       />
       <div className='container mx-auto px-4 lg:justify-between lg:px-0'>
         <motion.div
-          className='grid gap-8 md:grid-cols-2'
+          className='grid gap-8 md:grid-cols-2 xl:grid-cols-4'
           initial='offscreen'
           whileInView='onscreen'
           variants={ARTICLES_VARIANTS}
