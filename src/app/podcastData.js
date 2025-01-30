@@ -2,9 +2,8 @@ const podcastData = [
   {
     title: 'Pedal to the metal without tomorrow | George Bratsos',
     image: '/pedal-to-the-metal-without-tomorrow.webp',
-    description: "Welcome to 'Pedal to the metal without tomorrow' podcast.",
-    description2:
-      'George Bratsos a.k.a. Bratsaki shares his experiences from the world of simracing and motorsport, as well as his passion for cars.',
+    description:
+      "Welcome to 'Pedal to the metal without tomorrow' podcast. George Bratsos a.k.a. Bratsaki shares his experiences from the world of simracing and motorsport, as well as his passion for cars.",
   },
   {
     title: 'Serres Endurance TrackDay 2024 | George Bratsos',
@@ -13,6 +12,13 @@ const podcastData = [
       'The Endurance TrackDay in Serres is an experience that tests endurance, driving and strategy. In this episode, I take you along on the journey of my first participation in an endurance race.',
     description2:
       'We will talk about the challenges I faced, what went well (and what did not), and why this experience was so special. Come discover the magic of endurance racing with me!',
+  },
+  {
+    title: 'Rally Legend: An unforgettable Experience | George Bratsos',
+    image: '/rally-legend.webp',
+    description: 'Rally Legend 2022 was an experience like no other.',
+    description2:
+      'In this episode, I share the unique moments I experienced, the spectacular performances from historic rally cars, and the magic of being among motorsport legends. ',
   },
 ]
 

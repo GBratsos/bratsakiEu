@@ -36,8 +36,6 @@ const podcastVariants = {
 }
 
 export default function Podcasts({ podcastData }) {
-  console.log(podcastData)
-
   return (
     <section className='news-section gradient-bg py-8 lg:py-16' id='news'>
       <div className='container mx-auto px-4'>
