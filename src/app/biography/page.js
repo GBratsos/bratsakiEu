@@ -200,7 +200,7 @@ export default function Biography() {
               </motion.p>
             </div>
           </motion.div>
-          <motion.idv
+          <motion.div
             initial='offscreen'
             whileInView='onscreen'
             variants={container}
@@ -236,7 +236,7 @@ export default function Biography() {
                 className='object-cover'
               />
             </div>
-          </motion.idv>
+          </motion.div>
           <motion.div
             initial='offscreen'
             whileInView='onscreen'
