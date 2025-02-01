@@ -164,7 +164,7 @@ export default function Biography() {
             viewport={{ amount: 0.35, once: true }}
             className='mt-8 grid items-center gap-8 lg:mt-32 lg:grid-cols-2'
           >
-            <motion.div variants={opacityVariant} className='relative order-last py-40 lg:order-first lg:py-0'>
+            <motion.div variants={opacityVariant} className='relative order-last py-40 lg:order-first lg:py-56'>
               <Image
                 loading='lazy'
                 src='/bratsaki-simracing.webp'
