@@ -20,6 +20,22 @@ const podcastData = [
     description2:
       'In this episode, I share the unique moments I experienced, the spectacular performances from historic rally cars, and the magic of being among motorsport legends. ',
   },
+  {
+    title: 'Speedcar Experience - EKO Racing DiRT Games | George Bratsos',
+    image: '/speedcar-experience.webp',
+    description:
+      'The year of 2021 was when I experienced the true intensity of Speedcar and the adrenaline of DiRT Games.',
+    description2:
+      'In this episode, I share my experiences of participating in crosscar racing, the feeling of driving on dirt in a Speedcar, and how that racing experience compares to simracing.',
+  },
+  {
+    title: 'FIA Motorsport Games | George Bratsos',
+    image: '/fia-motorsport-games.webp',
+    description:
+      'In this episode, we travel to the exciting world of the FIA Motorsport Games, known as the "Olympic Games" of motorsport.',
+    description2:
+      'We look at the Greek team&apos;s progress at the 2022 Marseille and 2024 Valencia events, analysing entries, results and unforgettable moments.',
+  },
 ]
 
 export default podcastData
