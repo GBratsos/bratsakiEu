@@ -1,5 +1,3 @@
-'use client'
-
 import { faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'

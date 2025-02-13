@@ -29,6 +29,7 @@ const opacityVariant = {
     opacity: 1,
   },
 }
+
 export default function HomeContent() {
   return (
     <motion.section
