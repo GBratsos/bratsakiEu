@@ -13,9 +13,9 @@ const opacityVariant = {
   },
 }
 
-export default function PodcastLinks() {
+export default function PodcastLinks({ color, hoverColor }) {
   return (
-    <nav className='socials mx-auto flex w-[150px] flex-wrap items-center justify-between'>
+    <nav className='socials mx-auto flex w-[130px] flex-wrap items-center justify-between'>
       {[
         [faSpotify, 'https://open.spotify.com/show/23Y69tbd94gl4kowOhdNoq?si=019ca8c912744513', 'Spotify'],
         [faYoutube, 'https://www.youtube.com/rallydiaries/podcasts', 'YouTube'],
@@ -26,10 +26,10 @@ export default function PodcastLinks() {
           target='_blank'
           rel='noopener noreferrer'
           aria-label={title}
-          className='text-white hover:text-blue-100'
+          className={`text-${color} hover:text-${hoverColor}`}
           variants={opacityVariant}
         >
-          <FontAwesomeIcon icon={fa} className='text-[52px]' />
+          <FontAwesomeIcon icon={fa} size='3x' />
         </motion.a>
       ))}
     </nav>

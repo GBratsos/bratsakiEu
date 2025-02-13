@@ -37,7 +37,7 @@ export default function HomeContent() {
       initial='hidden'
       animate='show'
     >
-      <motion.div variants={opacityVariant} className='absolute bottom-0 left-[40%] right-0 top-0 lg:left-auto'>
+      <motion.div variants={opacityVariant} className='absolute top-0 right-0 bottom-0 left-[40%] lg:left-auto'>
         <Tilt
           borderRadius={0}
           spotGlareEnable={false}
@@ -75,7 +75,7 @@ export default function HomeContent() {
           <div>
             <motion.h1
               variants={opacityVariant}
-              className='relative text-[56px] font-black leading-none text-red lg:min-h-[160px] lg:text-[80px]'
+              className='text-red relative text-[56px] leading-none font-black lg:min-h-[160px] lg:text-[80px]'
             >
               GEORGE BRATSOS
             </motion.h1>
@@ -87,12 +87,12 @@ export default function HomeContent() {
             </motion.h2>
           </div>
         </div>
-        <div className='mb-[50px] mt-8 grid grid-cols-3 gap-8 lg:mb-[107px] lg:mt-10'>
+        <div className='mt-8 mb-[50px] grid grid-cols-3 gap-8 lg:mt-10 lg:mb-[107px]'>
           <motion.div variants={opacityVariant} className='col-span-2'>
             <h3 className='relative text-xl text-blue-100'>Sim racer & rally driver (in the making)</h3>
           </motion.div>
           <div className='relative h-[30px]'>
-            <div className='arrow-down left-auto right-0 lg:left-0'>
+            <div className='arrow-down right-0 left-auto lg:left-0'>
               <div className='left'></div>
               <div className='right'></div>
             </div>
@@ -119,17 +119,18 @@ export default function HomeContent() {
             <Link
               href='/biography'
               aria-label='George Bratsos biography'
-              className='button inline-flex items-center border-red px-[54px] py-[15px] font-black text-red hover:bg-red hover:text-black lg:w-[318px] lg:py-[22px]'
+              className='button border-red text-red hover:bg-red inline-flex items-center px-[54px] py-[15px] font-black hover:text-black lg:w-[318px]'
             >
               <span className='text-xl lg:text-[32px]'>SEE PROFILE</span>
               <FontAwesomeIcon
                 icon={faAngleRight}
-                className='absolute bottom-0 right-[30px] top-0 hidden h-full opacity-0 lg:ms-4 lg:inline-block lg:w-[30px]'
+                size='3x'
+                className='invinsible absolute top-[13px] right-[30px] opacity-0 lg:ms-4'
               />
             </Link>
           </div>
           <div className='hidden lg:block'>
-            <div className='h-1 w-[279px] bg-red'></div>
+            <div className='bg-red h-1 w-[279px]'></div>
           </div>
         </div>
       </div>

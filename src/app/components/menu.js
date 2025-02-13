@@ -31,12 +31,8 @@ export default function Menu() {
   const [isOpened, setIsOpened] = useState(false)
 
   return (
-    <section className='menu-section xxl:static relative z-20 flex items-center pt-[30px] lg:pt-[40px]'>
-      <FontAwesomeIcon
-        icon={faBars}
-        className='mr-8 w-[30px] cursor-pointer text-[30px]'
-        onClick={() => setIsOpened(!isOpened)}
-      />
+    <section className='menu-section relative z-20 flex items-center pt-[30px] lg:pt-[40px] 2xl:static'>
+      <FontAwesomeIcon icon={faBars} size='2x' className='mr-8 cursor-pointer' onClick={() => setIsOpened(!isOpened)} />
       <Link href='/' aria-label='home'>
         <svg xmlns='http://www.w3.org/2000/svg' width='136' height='61' viewBox='0 0 136 61' fill='none'>
           <path
@@ -79,14 +75,15 @@ export default function Menu() {
       </Link>
 
       <div
-        className={`gradient-bg fixed left-0 top-0 z-50 h-full w-0 overflow-hidden bg-opacity-75 backdrop-blur-lg transition-all duration-300 ${isOpened ? 'w-[300px] lg:w-[360px]' : 'w-[0]'}`}
+        className={`gradient-bg bg-opacity-75 fixed top-0 left-0 z-50 h-full w-0 overflow-hidden backdrop-blur-lg transition-all duration-300 ${isOpened ? 'w-[300px] lg:w-[360px]' : 'w-[0]'}`}
       >
         <div className='flex h-full w-full flex-col items-end justify-between px-6 py-8'>
           <div className='flex w-full flex-col items-end'>
             <FontAwesomeIcon
               icon={faClose}
               onClick={() => setIsOpened(false)}
-              className='z-30 w-[30px] cursor-pointer text-[30px]'
+              className='z-30 cursor-pointer'
+              size='2x'
               id='closeButton'
             />
 
@@ -97,19 +94,19 @@ export default function Menu() {
             >
               <motion.div variants={opacityVariant} className='px-4 py-3 text-white hover:text-blue-100'>
                 <Link href='/biography' className='text-lg font-bold'>
-                  <FontAwesomeIcon icon={faUser} className='mr-4 w-[24px] text-[24px]' />
+                  <FontAwesomeIcon icon={faUser} className='mr-4' size='lg' />
                   BIOGRAPHY
                 </Link>
               </motion.div>
               <motion.div variants={opacityVariant} className='px-4 py-3 text-white hover:text-blue-100'>
                 <Link href='/podcast' className='text-lg font-bold'>
-                  <FontAwesomeIcon icon={faPodcast} className='mr-4 w-[24px] text-[24px]' />
+                  <FontAwesomeIcon icon={faPodcast} className='mr-4' size='lg' />
                   PODCAST
                 </Link>
               </motion.div>
               <motion.div variants={opacityVariant} className='px-4 py-3 text-white hover:text-blue-100'>
                 <Link href='/#news' onClick={() => setIsOpened(false)} className='text-lg font-bold'>
-                  <FontAwesomeIcon icon={faNewspaper} className='mr-4 w-[24px] text-[24px]' />
+                  <FontAwesomeIcon icon={faNewspaper} className='mr-4' size='lg' />
                   NEWS
                 </Link>
               </motion.div>

@@ -42,7 +42,7 @@ export default function Gallery() {
         src='/bratsaki-gallery.webp'
         alt='Bratsaki Gallery'
         fill
-        className='absolute bottom-0 left-0 right-0 top-0 object-cover'
+        className='absolute top-0 right-0 bottom-0 left-0 object-cover'
       />
       <div className='container mx-auto px-4 lg:justify-between lg:px-0'>
         <motion.div
@@ -101,12 +101,13 @@ export default function Gallery() {
             href='https://instagram.com/bratsaki'
             target='_blank'
             rel='noopener noreferrer'
-            className='button mt-8 inline-flex items-center border-white px-[54px] py-[15px] font-black text-white hover:bg-white hover:text-red lg:mt-12 lg:w-[310px] lg:py-[22px]'
+            className='button hover:text-red mt-8 inline-flex items-center border-white px-[54px] py-[15px] font-black text-white hover:bg-white lg:mt-12 lg:w-[310px]'
           >
             <span className='text-xl lg:text-[32px]'>VIEW MORE</span>
             <FontAwesomeIcon
               icon={faAngleRight}
-              className='absolute bottom-0 right-[30px] top-0 hidden h-full opacity-0 lg:ms-4 lg:inline-block lg:w-[30px]'
+              size='3x'
+              className='invinsible absolute top-[13px] right-[30px] opacity-0 lg:ms-4'
             />
           </Link>
         </div>

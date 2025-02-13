@@ -2,10 +2,10 @@ import SocialMedia from './socialMedia'
 
 export default function Footer() {
   return (
-    <footer className='gradient-bg py-[64px]'>
+    <footer className='gradient-bg py-[48px]'>
       <div className='footer-top container mx-auto mb-8 flex justify-center px-4 lg:mb-[100px] lg:justify-start'>
         <svg
-          className='hidden lg:inline-block lg:max-w-[482px]'
+          className='hidden lg:inline-block lg:w-[482px]'
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 482 60'
           fill='none'
@@ -157,7 +157,7 @@ export default function Footer() {
           <path d='M468.74 33.5755V2.23242H480.729V33.5755H468.74Z' fill='#E9E9E9' />
         </svg>
         <svg
-          className='max-w-[212px] md:max-w-[50%] lg:hidden'
+          className='block w-[212px] md:w-[50%] lg:hidden'
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 212 96'
           fill='none'

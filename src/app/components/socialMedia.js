@@ -33,7 +33,7 @@ export default function SocialMedia() {
             aria-label={title}
             className='flex items-center justify-center text-white hover:text-blue-100'
           >
-            <FontAwesomeIcon icon={fa} className='h-[23px] text-[23px]' />
+            <FontAwesomeIcon icon={fa} size='xl' />
           </Link>
         ))}
       </nav>

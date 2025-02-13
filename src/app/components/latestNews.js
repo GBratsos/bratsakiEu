@@ -50,7 +50,7 @@ export default function LatestNews({ data }) {
             <motion.article
               key={post.view_node}
               variants={articleVariants}
-              className='blogpost-card relative rounded-3xl border-8 bg-white hover:border-red'
+              className='blogpost-card hover:border-red relative rounded-3xl border-8 bg-white'
             >
               <div className='img-container'>
                 <picture>
@@ -81,7 +81,7 @@ export default function LatestNews({ data }) {
                 </picture>
               </div>
               <section className='px-6 py-4'>
-                <h2 className='max-h-13 mb-4 text-xl font-bold text-black'>
+                <h2 className='mb-4 max-h-13 text-xl font-bold text-black'>
                   <a href={post.view_node} target='_blank' rel='noopener noreferrer' aria-label='{post.title}'>
                     {post.title}
                   </a>
@@ -96,12 +96,13 @@ export default function LatestNews({ data }) {
             href='https://rallydiaries.eu/en/news'
             target='_blank'
             rel='noopener noreferrer'
-            className='button mt-8 inline-flex items-center border-white px-[54px] py-[15px] font-black text-white hover:bg-white hover:text-red lg:mt-12 lg:w-[310px] lg:py-[22px]'
+            className='button hover:text-red mt-8 inline-flex items-center border-white px-[54px] py-[15px] font-black text-white hover:bg-white lg:mt-12 lg:w-[310px]'
           >
             <span className='text-xl lg:text-[32px]'>VIEW MORE</span>
             <FontAwesomeIcon
               icon={faAngleRight}
-              className='absolute bottom-0 right-[30px] top-0 hidden h-full opacity-0 lg:ms-4 lg:inline-block lg:w-[30px]'
+              size='3x'
+              className='invinsible absolute top-[13px] right-[30px] opacity-0 lg:ms-4'
             />
           </Link>
         </div>

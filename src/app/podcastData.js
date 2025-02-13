@@ -3,7 +3,7 @@ const podcastData = [
     title: 'Pedal to the metal without tomorrow | George Bratsos',
     image: '/pedal-to-the-metal-without-tomorrow.webp',
     description:
-      "Welcome to 'Pedal to the metal without tomorrow' podcast. George Bratsos a.k.a. Bratsaki shares his experiences from the world of simracing and motorsport, as well as his passion for cars.",
+      'Welcome to "Pedal to the metal without tomorrow" podcast. George Bratsos a.k.a. Bratsaki shares his experiences from the world of simracing and motorsport, as well as his passion for cars.',
   },
   {
     title: 'Serres Endurance TrackDay 2024 | George Bratsos',
@@ -28,14 +28,13 @@ const podcastData = [
     description2:
       'In this episode, I share my experiences of participating in crosscar racing, the feeling of driving on dirt in a Speedcar, and how that racing experience compares to simracing.',
   },
-  {
-    title: 'FIA Motorsport Games | George Bratsos',
-    image: '/fia-motorsport-games.webp',
-    description:
-      'In this episode, we travel to the exciting world of the FIA Motorsport Games, known as the "Olympic Games" of motorsport.',
-    description2:
-      'We look at the Greek team&apos;s progress at the 2022 Marseille and 2024 Valencia events, analysing entries, results and unforgettable moments.',
-  },
+  // {
+  //   title: 'FIA Motorsport Games | George Bratsos',
+  //   image: '/fia-motorsport-games.webp',
+  //   description:
+  //     "In this episode, we travel to the exciting world of the FIA Motorsport Games, known as the 'Olympic Games' of motorsport. We look at the Greek team's progress at the 2022 Marseille and 2024 Valencia events, analysing entries, results and unforgettable moments.",
+  //   description2: '',
+  // },
 ]
 
 export default podcastData

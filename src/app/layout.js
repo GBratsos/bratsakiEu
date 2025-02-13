@@ -5,7 +5,7 @@ import Rallydiaries from './components/rallydiaries'
 import BorderColor from './components/borderColor'
 import Script from 'next/script'
 
-const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' })
+const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-sans' })
 
 export const metadata = {
   alternates: {
@@ -46,6 +46,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <Script
         id='google-analytics'
         strategy='lazyOnload'

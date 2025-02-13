@@ -1,12 +1,17 @@
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
   output: 'export',
+
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
-  //trailingSlash: true,
+  // trailingSlash: true,
 
   // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
-  //skipTrailingSlashRedirect: true,
+  // skipTrailingSlashRedirect: true,
 
+  // Optional: Change the output directory `out` -> `dist`
+  // distDir: 'dist',
   // Optional: Change the output directory `out` -> `dist`
   distDir: 'build',
   images: {
@@ -15,4 +20,4 @@ const nextConfig = {
   },
 }
 
-export default nextConfig
+module.exports = nextConfig

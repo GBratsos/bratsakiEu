@@ -52,9 +52,9 @@ export default function Podcasts({ podcastData }) {
             <motion.article
               key={podcast.title}
               variants={podcastVariants}
-              className='podcast-card relative grid-flow-col rounded-3xl border-8 bg-white px-6 py-4 hover:border-red md:grid'
+              className='podcast-card hover:border-red relative grid-flow-col rounded-3xl border-8 bg-white px-6 py-4 md:grid'
             >
-              <div className='img-container mb-4 md:mb-0 md:mr-4'>
+              <div className='img-container mb-4 md:mr-4 md:mb-0'>
                 <Image
                   loading='lazy'
                   src={podcast.image}
@@ -65,12 +65,13 @@ export default function Podcasts({ podcastData }) {
                 />
               </div>
               <div>
-                <h2 className='max-h-13 mb-4 text-xl font-bold text-black'>{podcast.title}</h2>
+                <h2 className='mb-4 text-xl font-bold text-black'>{podcast.title}</h2>
                 <h3 className='mb-4 text-black'>{podcast.description}</h3>
                 {podcast.description2 && <p className='text-black'>{podcast.description2}</p>}
               </div>
-              <div className='podcast-links'>
-                <PodcastLinks />
+              <div className='md:border-red mt-4 md:mt-0 md:ml-4 md:border-l-4 md:pl-4'>
+                <h4 className='mb-4 text-xl font-bold text-black'>Listen Now</h4>
+                <PodcastLinks color='black' hoverColor='blue-500' />
               </div>
             </motion.article>
           ))}

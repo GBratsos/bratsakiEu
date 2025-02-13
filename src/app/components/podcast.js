@@ -81,16 +81,17 @@ export default function Podcast() {
             <motion.div variants={buttonVariant}>
               <Link
                 href='/podcast'
-                className='button my-8 inline-flex items-center border-white px-[54px] py-[15px] font-black text-white hover:bg-white hover:text-red lg:mt-12 lg:w-[350px] lg:py-[22px]'
+                className='button hover:text-red my-8 inline-flex items-center border-white px-[54px] py-[15px] font-black text-white hover:bg-white lg:mt-12 lg:w-[350px]'
               >
                 <span className='text-xl lg:text-[32px]'>ALL EPISODES</span>
                 <FontAwesomeIcon
                   icon={faAngleRight}
-                  className='absolute bottom-0 right-[30px] top-0 hidden h-full opacity-0 lg:ms-4 lg:inline-block lg:w-[30px]'
+                  size='3x'
+                  className='invinsible absolute top-[13px] right-[30px] opacity-0 lg:ms-4'
                 />
               </Link>
             </motion.div>
-            <PodcastLinks />
+            <PodcastLinks color='white' hoverColor='blue-100' />
           </div>
         </div>
       </motion.div>

@@ -80,7 +80,7 @@ export default function Podcast() {
       >
         <motion.div
           variants={topOpacityVariant}
-          className='absolute bottom-0 right-[-128px] top-0 md:right-0 lg:left-auto'
+          className='absolute top-0 right-[-128px] bottom-0 md:right-0 lg:left-auto'
         >
           <Tilt
             borderRadius={0}
@@ -119,10 +119,10 @@ export default function Podcast() {
             <div>
               <motion.h1
                 variants={topOpacityVariant}
-                className='relative text-[38px] font-black leading-snug text-red lg:min-h-[160px] lg:text-[59px]'
+                className='text-red relative text-[38px] leading-snug font-black lg:min-h-[160px] lg:text-[59px]'
               >
                 Pedal to the metal
-                <p className='text-[36px] font-bold leading-none lg:text-[50px]'>
+                <p className='text-[36px] leading-none font-bold lg:text-[50px]'>
                   <i>without tomorrow</i>
                 </p>
               </motion.h1>
@@ -134,12 +134,12 @@ export default function Podcast() {
               </motion.h2>
             </div>
           </div>
-          <div className='mb-[50px] mt-4 grid grid-cols-3 gap-8 lg:mb-[107px] lg:mt-10'>
+          <div className='mt-4 mb-[50px] grid grid-cols-3 gap-8 lg:mt-10 lg:mb-[107px]'>
             <motion.div variants={opacityVariant} className='col-span-2'>
               <h3 className='relative text-xl text-blue-100'>Sim racer & rally driver (in the making)</h3>
             </motion.div>
             <div className='relative col-start-3 h-[30px]'>
-              <div className='arrow-down left-auto right-0 lg:left-0'>
+              <div className='arrow-down right-0 left-auto lg:left-0'>
                 <div className='left'></div>
                 <div className='right'></div>
               </div>
@@ -150,8 +150,8 @@ export default function Podcast() {
           <div className='grid gap-8 lg:grid-cols-4'>
             <div className='relative col-span-2'>
               <p className='mb-6 text-xl'>
-                When Bratsaki starts talking, he forgets to stop. Car, racing, car racing and various experiences from
-                tracks, tests and more with guests.
+                When Bratsaki starts talking, he forgets to stop. Cars, motorsports and various experiences from tracks,
+                tests and more with guests.
               </p>
             </div>
           </div>

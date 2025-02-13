@@ -61,7 +61,7 @@ export default function Biography() {
       >
         <motion.div
           variants={topOpacityVariant}
-          className='absolute bottom-0 right-[-128px] top-0 md:right-0 lg:left-auto'
+          className='absolute top-0 right-[-128px] bottom-0 md:right-0 lg:left-auto'
         >
           <Tilt
             borderRadius={0}
@@ -100,7 +100,7 @@ export default function Biography() {
             <div>
               <motion.h1
                 variants={topOpacityVariant}
-                className='relative text-[56px] font-black leading-none text-red lg:min-h-[160px] lg:text-[80px]'
+                className='text-red relative text-[56px] leading-none font-black lg:min-h-[160px] lg:text-[80px]'
               >
                 GEORGE BRATSOS
               </motion.h1>
@@ -112,12 +112,12 @@ export default function Biography() {
               </motion.h2>
             </div>
           </div>
-          <div className='mb-[50px] mt-8 grid grid-cols-3 gap-8 lg:mb-[107px] lg:mt-10'>
+          <div className='mt-8 mb-[50px] grid grid-cols-3 gap-8 lg:mt-10 lg:mb-[107px]'>
             <motion.div variants={topOpacityVariant} className='col-span-2'>
               <h3 className='relative text-xl text-blue-100'>From simracing to real rallies</h3>
             </motion.div>
             <div className='relative h-[30px]'>
-              <div className='arrow-down left-auto right-0 lg:left-0'>
+              <div className='arrow-down right-0 left-auto lg:left-0'>
                 <div className='left'></div>
                 <div className='right'></div>
               </div>

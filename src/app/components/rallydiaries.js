@@ -131,12 +131,15 @@ export default function Rallydiaries() {
         <div>
           <Link
             href='https://rallydiaries.eu/en'
-            className='button mt-8 inline-flex items-center justify-center border-black px-8 py-[15px] text-black hover:bg-black hover:text-yellow lg:mt-0 lg:w-[365px] lg:py-[22px]'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='button hover:text-yellow mt-8 inline-flex items-center justify-center border-black px-8 py-[15px] text-black hover:bg-black lg:mt-0 lg:w-[365px]'
           >
             <span className='text-xl font-black lg:text-[32px]'>VISIT WEBSITE</span>
             <FontAwesomeIcon
               icon={faAngleRight}
-              className='absolute bottom-0 right-[30px] top-0 hidden h-full opacity-0 lg:ms-4 lg:inline-block lg:w-[30px]'
+              size='3x'
+              className='invinsible absolute top-[13px] right-[30px] opacity-0 lg:ms-4'
             />
           </Link>
         </div>
