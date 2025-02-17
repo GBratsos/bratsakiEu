@@ -11,20 +11,20 @@ export const metadata = {
   alternates: {
     canonical: 'https://bratsaki.eu',
   },
-  title: 'George Bratsos | Rally Driver - Simracer - Content Creator',
+  title: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
   description:
     'George Bratsos is a Greek simracer & rally driver. He promotes motorsport in Greece, through his online content and motorsport activities. From simracing to real rallies.',
 
   openGraph: {
-    title: 'George Bratsos | Rally Driver - Simracer - Content Creator',
+    title: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
     description:
       'George Bratsos is a Greek simracer & rally driver. He promotes motorsport in Greece, through his online content and motorsport activities. From simracing to real rallies.',
     url: 'https://bratsaki.eu',
-    siteName: 'George Bratsos | Rally Driver - Simracer - Content Creator',
+    siteName: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
     images: [
       {
-        url: 'https://bratsaki.eu/bratsakifb.webp',
-        alt: 'George Bratsos | Rally Driver - Simracer - Content Creator',
+        url: 'https://bratsaki.eu/bratsakifb.jpg',
+        alt: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
         width: 1200,
         height: 630,
       },
