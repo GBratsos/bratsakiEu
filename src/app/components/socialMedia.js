@@ -23,7 +23,6 @@ export default function SocialMedia() {
           [faFacebookSquare, 'https://fb.com/geobratsos', 'Facebook'],
           [faLinkedin, 'https://www.linkedin.com/in/george-bratsos/', 'LinkedIn'],
           [faDiscord, 'https://rallydiaries.eu/discord', 'Discord'],
-          [faViber, 'https://rallydiaries.eu/viber', 'Viber'],
         ].map(([fa, url, title]) => (
           <Link
             href={url}
