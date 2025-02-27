@@ -4,7 +4,6 @@ import {
   faInstagram,
   faTiktok,
   faTwitch,
-  faViber,
   faYoutube,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
