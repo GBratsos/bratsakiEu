@@ -66,7 +66,7 @@ export default function Podcasts({ podcastData }) {
               </div>
               <div className='md:border-red mt-4 md:mt-0 md:ml-4 md:border-l-4 md:pl-4'>
                 <h4 className='mb-4 text-xl font-bold text-black'>Listen Now</h4>
-                <PodcastLinks color='black' hoverColor='blue-500' />
+                <PodcastLinks />
               </div>
             </motion.article>
           ))}

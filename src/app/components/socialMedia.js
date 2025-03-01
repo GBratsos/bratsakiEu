@@ -16,12 +16,12 @@ export default function SocialMedia() {
       <nav className='socials mx-auto grid grid-cols-4 grid-rows-2 gap-y-8'>
         {[
           [faInstagram, 'https://instagram.com/bratsaki', 'Instagram'],
-          [faTwitch, 'https://twitch.tv/bratsaki', 'Twitch'],
           [faTiktok, 'https://tiktok.com/@geobratsos', 'TikTok'],
           [faYoutube, 'https://www.youtube.com/rallydiaries?sub_confirmation=1', 'YouTube'],
-          [faFacebookSquare, 'https://fb.com/geobratsos', 'Facebook'],
+          [faTwitch, 'https://twitch.tv/bratsaki', 'Twitch'],
           [faLinkedin, 'https://www.linkedin.com/in/george-bratsos/', 'LinkedIn'],
           [faDiscord, 'https://rallydiaries.eu/discord', 'Discord'],
+          [faFacebookSquare, 'https://fb.com/geobratsos', 'Facebook'],
         ].map(([fa, url, title]) => (
           <Link
             href={url}

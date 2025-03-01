@@ -3,7 +3,7 @@ import SocialMedia from './socialMedia'
 export default function Footer() {
   return (
     <footer className='gradient-bg py-[48px]'>
-      <div className='footer-top container mx-auto mb-8 flex justify-center px-4 lg:mb-[100px] lg:justify-start'>
+      <div className='footer-top container mx-auto mb-8 flex justify-center px-4 lg:mb-[80px] lg:justify-start'>
         <svg
           className='hidden lg:inline-block lg:w-[482px]'
           xmlns='http://www.w3.org/2000/svg'
