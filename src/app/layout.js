@@ -33,7 +33,7 @@ export const metadata = {
     type: 'website',
   },
   icons: {
-    icon: '/favicons/favicon.icon',
+    icon: '/favicons/favicon.ico',
     shortcut: '/favicons/favicon-96x96.png',
     apple: '/favicons/apple-icon.png',
     other: {
