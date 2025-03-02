@@ -91,7 +91,7 @@ export default function Podcast() {
                 />
               </Link>
             </motion.div>
-            <PodcastLinks color='white' hoverColor='blue-100' />
+            <PodcastLinks color='text-white' hoverColor='text-blue-100' />
           </div>
         </div>
       </motion.div>
