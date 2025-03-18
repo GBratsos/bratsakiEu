@@ -28,12 +28,25 @@ const podcastData = [
     description2:
       'In this episode, I share my experiences of participating in crosscar racing, the feeling of driving on dirt in a Speedcar, and how that racing experience compares to simracing.',
   },
+  {
+    title: 'FIA Motorsport Games | George Bratsos',
+    image: '/fia-motorsport-games.webp',
+    description:
+      "In this episode, we travel to the exciting world of the FIA Motorsport Games, known as the 'Olympic Games' of motorsport. We look at the Greek team's progress at the 2022 Marseille and 2024 Valencia events, analysing entries, results and unforgettable moments.",
+    description2: '',
+  },
+  {
+    title: 'Motorsport Experience till 2023 | George Bratsos',
+    image: '/bratsaki-season-2023.webp',
+    description:
+      'How did I start racing? How I evolved through the racing and where I am looking to get to! A story about my involvement with motorsports and what lessons it has all taught me.',
+    description2: '',
+  },
   // {
-  //   title: 'FIA Motorsport Games | George Bratsos',
-  //   image: '/fia-motorsport-games.webp',
-  //   description:
-  //     "In this episode, we travel to the exciting world of the FIA Motorsport Games, known as the 'Olympic Games' of motorsport. We look at the Greek team's progress at the 2022 Marseille and 2024 Valencia events, analysing entries, results and unforgettable moments.",
-  //   description2: '',
+  //   title: 'What is simracing | George Bratsos',
+  //   image: '/bratsaki-intro-to-simracing.webp',
+  //   description: 'How did I start racing? How I evolved through the racing and where I am looking to get to!',
+  //   description2: 'A story about my involvement with motorsports and what lessons it has all taught me.',
   // },
 ]
 
