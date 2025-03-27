@@ -42,12 +42,13 @@ const podcastData = [
       'How did I start racing? How I evolved through the racing and where I am looking to get to! A story about my involvement with motorsports and what lessons it has all taught me.',
     description2: '',
   },
-  // {
-  //   title: 'What is simracing | George Bratsos',
-  //   image: '/bratsaki-intro-to-simracing.webp',
-  //   description: 'How did I start racing? How I evolved through the racing and where I am looking to get to!',
-  //   description2: 'A story about my involvement with motorsports and what lessons it has all taught me.',
-  // },
+  {
+    title: 'What is simracing | George Bratsos',
+    image: '/bratsaki-intro-to-simracing.webp',
+    description:
+      'How did I start racing? How I evolved through the racing and where I am looking to get to! A story about my involvement with motorsports and what lessons it has all taught me.',
+    description2: '',
+  },
 ]
 
 export default podcastData
