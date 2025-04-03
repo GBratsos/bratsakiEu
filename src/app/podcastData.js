@@ -39,15 +39,25 @@ const podcastData = [
     title: 'Motorsport Experience till 2023 | George Bratsos',
     image: '/bratsaki-season-2023.webp',
     description:
-      'How did I start racing? How I evolved through the racing and where I am looking to get to! A story about my involvement with motorsports and what lessons it has all taught me.',
-    description2: '',
+      'How did I get into racing? How did I grow through the sport, and where am I aiming to go next? This is the story of my motorsport journey—from my first steps behind the wheel to the challenges, victories, and lessons that have shaped me along the way.',
+    description2:
+      "Join me as I reflect on my evolution in racing, the key moments that defined my path, and my ambitions for the future. Whether you're a fellow racer or just someone who loves the thrill of motorsports, this is a journey worth sharing!",
   },
   {
     title: 'What is simracing | George Bratsos',
     image: '/bratsaki-intro-to-simracing.webp',
     description:
-      'How did I start racing? How I evolved through the racing and where I am looking to get to! A story about my involvement with motorsports and what lessons it has all taught me.',
-    description2: '',
+      'How does simracing compare to real-world driving and professional racing? Is it just a game, or does it have real benefits for aspiring and experienced racers alike?',
+    description2:
+      "In this episode, George takes a deep dive into the world of simracing, offering a beginner-friendly introduction to what it is, how it works, and why it has become such a valuable tool in modern motorsport. From improving driving skills to bridging the gap between virtual and real-world racing, simracing is more than just entertainment—it's a discipline of its own.",
+  },
+  {
+    title: 'George, Kostas, and il Mostro Take on the 4th Historic Rally of Tripoli!',
+    image: '/bratsaki-regularity-tripolis.webp',
+    description:
+      'Our journey into the world of regularity rallying has officially begun! With excitement, anticipation, and a few surprises along the way, we took part in the 4th Historic Rally of Tripoli, our first-ever regularity rally. But was it a flawless debut... or did we face unexpected challenges?',
+    description2:
+      "Get ready for a ride full of twists, turns, and a bit of mystery—because in regularity rallying, it's not always about speed but about mastering the art of consistency!",
   },
 ]
 
