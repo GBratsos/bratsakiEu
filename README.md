@@ -1,3 +1,3 @@
 # bratsaki.eu
 
-Personal website built with NextJS.
+Personal website built with NextJS 14.
