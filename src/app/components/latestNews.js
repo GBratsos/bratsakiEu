@@ -55,7 +55,7 @@ export default function LatestNews({ data }) {
               <div className='img-container'>
                 <picture>
                   <source
-                    srcSet={`https://rallydiaries.eu${post.field_media_image_1}`}
+                    srcSet={`https://rallydiaries.eu${post.field_media_image}`}
                     media='(max-width: 500px)'
                     type='image/webp'
                   />
@@ -73,7 +73,7 @@ export default function LatestNews({ data }) {
                     loading='lazy'
                     width='720'
                     height='372'
-                    src={`https://rallydiaries.eu${post.field_media_image_1}`}
+                    src={`https://rallydiaries.eu${post.field_media_image}`}
                     alt={post.title}
                     typeof='foaf:Image'
                     className='rounded-t-2xl'
@@ -82,7 +82,7 @@ export default function LatestNews({ data }) {
               </div>
               <section className='px-6 py-4'>
                 <h2 className='mb-4 max-h-13 text-xl font-bold text-black'>
-                  <a href={post.view_node} target='_blank' rel='noopener noreferrer' aria-label='{post.title}'>
+                  <a href={post.view_node} target='_blank' rel='noopener noreferrer' aria-label={post.title}>
                     {post.title}
                   </a>
                 </h2>
