@@ -6,6 +6,7 @@ import {
   faTwitch,
   faYoutube,
   faLinkedin,
+  faSpotify,
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
@@ -18,6 +19,7 @@ export default function SocialMedia() {
           [faInstagram, 'https://instagram.com/bratsaki', 'Instagram'],
           [faTiktok, 'https://tiktok.com/@geobratsos', 'TikTok'],
           [faYoutube, 'https://www.youtube.com/rallydiaries?sub_confirmation=1', 'YouTube'],
+          [faSpotify, 'https://open.spotify.com/show/23Y69tbd94gl4kowOhdNoq?si=019ca8c912744513', 'Spotify'],
           [faTwitch, 'https://twitch.tv/bratsaki', 'Twitch'],
           [faLinkedin, 'https://www.linkedin.com/in/george-bratsos/', 'LinkedIn'],
           [faDiscord, 'https://rallydiaries.eu/discord', 'Discord'],

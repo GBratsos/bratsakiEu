@@ -5,7 +5,7 @@ import Podcast from './components/podcast'
 import Simracing from './components/simracing'
 
 async function getData() {
-  const res = await fetch('https://rallydiaries.eu/en/rest/articles/bratsaki', { next: { revalidate: 60 } })
+  const res = await fetch('https://rallydiaries.eu/en/rest/articles/bratsaki', { next: { revalidate: 1 } })
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Menu from '../components/menu'
 import { motion } from 'framer-motion'
 import { Tilt } from 'react-next-tilt'
+import Podcast from '../components/podcast'
 
 const container = {
   offscreen: { opacity: 0 },
@@ -301,6 +302,7 @@ export default function Biography() {
           </motion.div>
         </section>
       </section>
+      <Podcast />
     </section>
   )
 }
