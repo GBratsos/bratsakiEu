@@ -7,19 +7,6 @@ import { Tilt } from 'react-next-tilt'
 import Podcasts from '../components/latestPodcasts'
 import podcastData from '../podcastData'
 
-const container = {
-  offscreen: { opacity: 0 },
-  onscreen: {
-    opacity: 1,
-    transition: {
-      ease: 'easeInOut',
-      duration: 1.2,
-      delayChildren: 0.35,
-      staggerChildren: 0.4,
-    },
-  },
-}
-
 const opacityVariant = {
   offscreen: {
     opacity: 0,
@@ -48,22 +35,6 @@ const topOpacityVariant = {
   },
   show: {
     opacity: 1,
-  },
-}
-
-const podcastVariants = {
-  offscreen: {
-    opacity: 0,
-    y: 20,
-  },
-  onscreen: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: 'spring',
-      bounce: 0.4,
-      duration: 0.8,
-    },
   },
 }
 
