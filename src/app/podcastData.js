@@ -59,6 +59,14 @@ const podcastData = [
     description2:
       "Get ready for a ride full of twists, turns, and a bit of mystery—because in regularity rallying, it's not always about speed but about mastering the art of consistency!",
   },
+  {
+    title: 'DiRT Hellenic community: The best simrally community!',
+    image: '/bratsaki-dirtHellenic-community.webp',
+    description:
+      'Discover the most active Greek community around DiRT Rally / EA Sports WRC and simrally! In this episode of Pedal to the metal without tomorrow, we talk about the creation and development of the DiRT Hellenic Community, the online championships, the actions, and how our common love for simrally united people from all over Greece.',
+    description2:
+      'If you are interested in rally gaming, simracing in Greece or want to participate in online championships, this episode is for you!',
+  },
 ]
 
 export default podcastData
