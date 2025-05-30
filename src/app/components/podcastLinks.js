@@ -12,7 +12,7 @@ export default function PodcastLinks({ color, hoverColor }) {
           'Spotify',
           'text-green',
         ],
-        [faYoutube, 'https://youtube.com/rallydiaries/podcasts', 'YouTube', 'text-red'],
+        [faYoutube, 'https://www.youtube.com/playlist?list=PLk7jtKFo2GKVJBpv7zwhUrIqVPrsX3uz2', 'YouTube', 'text-red'],
       ].map(([fa, url, title, colorHover]) => (
         <Link
           href={url}
