@@ -210,3 +210,7 @@ footer,
   bottom: 0;
   right: 0;
 }
+
+.Spotify:hover svg path {
+  fill: var(--color-green);
+}

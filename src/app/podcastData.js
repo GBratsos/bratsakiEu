@@ -75,6 +75,22 @@ const podcastData = [
     description2:
       'Richard Burns Rally is a legendary simrally game released in 2004, widely considered by many as the greatest rally simulator of all time. Unlike arcade racing games, RBR offers a truly realistic simracing experience, focusing on driving physics, detailed stages, and difficulty that closely mirrors real-world rallying.',
   },
+  {
+    title: 'il Mostro is back on the road!',
+    image: '/1st-historic-rally-pigasos.webp',
+    description:
+      "The 1st Historic Rally Pegasus debuted as a new regularity event for historic vehicles, and of course we couldn't miss it.",
+    description2:
+      'With the black Fiat Cinquecento S - also known as il Mostro - and my co-driver Kostas, we got into racing mood for the next challenge.',
+  },
+  // {
+  //   title: 'Alfie the Greek Mini vs il Mostro',
+  //   image: '/alfie-the-greek-mini-vs-il-mostro.webp',
+  //   description:
+  //     "It's time to hear Alfie's stories from the 1st Historic Rally Pegasus and the 1st Historic Rally of Tripoli.",
+  //   description2:
+  //     "Alfie is a friend and competitor of il Mostro. The two friends and their crews made their first appearance together on the special stages of the historic rallies. So let's find out more details about Alfie and his crew.",
+  // },
   // {
   //   title: 'What Is a Track Day and Why Should You Try It at Least Once?',
   //   image: '/bratsaki-track-day.webp',

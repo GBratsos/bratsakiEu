@@ -20,7 +20,7 @@ export default function PodcastLinks({ color, hoverColor }) {
           target='_blank'
           rel='noopener noreferrer'
           aria-label={title}
-          className={`${hoverColor ? color + ' hover:' + hoverColor : 'text-black' + ' hover:' + colorHover}`}
+          className={`${title} ${hoverColor ? color + ' hover:' + hoverColor : 'text-black' + ' hover:' + colorHover}`}
         >
           <FontAwesomeIcon icon={fa} size='3x' />
         </Link>
