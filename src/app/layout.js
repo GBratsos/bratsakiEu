@@ -61,6 +61,7 @@ export default function RootLayout({ children }) {
           `,
         }}
       />
+
       <meta name='facebook-domain-verification' content='3rxkbhtgwmm0w4pmcatgkd13kvzt19' />
       <body className={`${inter.variable} font-sans`}>
         <main>
