@@ -7,7 +7,7 @@ export default function Rallydiaries() {
   return (
     <section className='section rallydiaries-section relative py-[40px] lg:py-[100px]'>
       <Image loading='lazy' src='/rallydiaries.webp' alt='Rallydiaries by Bratsos Team' fill className='object-cover' />
-      <div className='container mx-auto flex flex-col flex-wrap items-center justify-center px-[68px] lg:flex-row lg:justify-between lg:px-0'>
+      <div className='container mx-auto flex flex-col flex-wrap items-center justify-center px-[68px] lg:flex-row lg:justify-between lg:px-4'>
         <div>
           <svg
             xmlns='http://www.w3.org/2000/svg'
