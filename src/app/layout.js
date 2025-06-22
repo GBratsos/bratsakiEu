@@ -14,7 +14,20 @@ export const metadata = {
   title: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
   description:
     'George Bratsos is a Greek simracer & rally driver. He promotes motorsport in Greece, through his online content and motorsport activities. From simracing to real rallies.',
-
+  keywords: [
+    'George Bratsos',
+    'Simracing Greece',
+    'Simracer',
+    'Greek motorsport',
+    'Rally driver Greece',
+    'Content Creator motorsports',
+    'Bratsaki',
+    'Sim to real',
+    'Motorsport Greece',
+    'simracing',
+    'peugeot 205',
+    'rally driver',
+  ],
   openGraph: {
     title: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
     description:
