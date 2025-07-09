@@ -63,6 +63,11 @@ export default function RootLayout({ children }) {
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <meta name='facebook-domain-verification' content='3rxkbhtgwmm0w4pmcatgkd13kvzt19' />
       <Script
+        id='cookieyes'
+        strategy='afterInteractive'
+        src='https://cdn-cookieyes.com/client_data/763724a18fa288293ea1f9a8/script.js'
+      />
+      <Script
         id='google-analytics'
         strategy='lazyOnload'
         dangerouslySetInnerHTML={{
@@ -74,11 +79,6 @@ export default function RootLayout({ children }) {
             })(window,document,'script','dataLayer','GTM-PWTGGFQ');
           `,
         }}
-      />
-      <Script
-        id='cookieyes'
-        strategy='afterInteractive'
-        src='https://cdn-cookieyes.com/client_data/763724a18fa288293ea1f9a8/script.js'
       />
       <body className={`${inter.variable} font-sans`}>
         <main>
