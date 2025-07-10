@@ -37,7 +37,7 @@ export default function Podcasts({ podcastData }) {
         <h2 className='mb-8 text-3xl font-bold text-blue-100 lg:mb-[40px] lg:text-5xl'>Latest Podcast Episodes</h2>
 
         <motion.div
-          className='grid gap-8 lg:grid-cols-1'
+          className='grid gap-8 lg:grid-cols-3'
           initial='offscreen'
           whileInView='onscreen'
           variants={container}
@@ -47,15 +47,15 @@ export default function Podcasts({ podcastData }) {
             <motion.article
               key={podcast.title}
               variants={podcastVariants}
-              className='podcast-card hover:border-red relative grid-flow-col rounded-3xl border-8 bg-white px-6 py-4 md:grid'
+              className='podcast-card hover:border-red relative grid-flow-col rounded-3xl border-8 bg-white px-6 py-4'
             >
-              <div className='img-container mb-4 md:mr-4 md:mb-0'>
+              <div className='img-container mb-4 flex items-center justify-center'>
                 <Image
                   loading='lazy'
                   src={podcast.image}
-                  width={160}
-                  height={160}
-                  className='w-full md:w-[160px]'
+                  width={300}
+                  height={300}
+                  className='w-full md:w-[300px]'
                   alt={podcast.title}
                 />
               </div>
@@ -64,8 +64,8 @@ export default function Podcasts({ podcastData }) {
                 <h3 className='mb-4 text-black'>{podcast.description}</h3>
                 {podcast.description2 && <p className='text-black'>{podcast.description2}</p>}
               </div>
-              <div className='md:border-red mt-4 md:mt-0 md:ml-4 md:border-l-4 md:pl-4'>
-                <h4 className='mb-4 text-xl font-bold text-black'>Listen Now</h4>
+              <div className='md:border-red mt-4 md:border-t-4'>
+                <h4 className='my-4 text-xl font-bold text-black'>Listen Now</h4>
                 <PodcastLinks />
               </div>
             </motion.article>

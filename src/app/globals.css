@@ -218,3 +218,9 @@ footer,
 .YouTube:hover svg path {
   fill: var(--color-red);
 }
+
+#cookieyes,
+.cookieyes-banner {
+  all: unset;
+  z-index: 999;
+}

@@ -97,7 +97,7 @@ const podcastData = [
   //   description:
   //     'Learn what a track day is, how to participate, what you need, and where track days take place in Greece.',
   //   description2:
-  //     'Have you heard the term track day but don’t know exactly what it is or how to participate? You’re in the right place! In this guide, you’ll learn what a track day is, how it works, who takes part, and why it’s worth experiencing – especially if you love driving or motorsport.',
+  //     "Have you heard the term track day but don't know exactly what it is or how to participate? You're in the right place! In this guide, you'll learn what a track day is, how it works, who takes part, and why it's worth experiencing - especially if you love driving or motorsport.",
   // },
 ]
 
