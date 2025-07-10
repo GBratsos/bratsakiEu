@@ -1,14 +1,11 @@
-'use client'
-
-import { useEffect } from 'react'
+import Script from 'next/script'
 
 export default function CookieYesLoader() {
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://cdn-cookieyes.com/client_data/763724a18fa288293ea1f9a8/script.js'
-    script.async = true
-    document.body.appendChild(script)
-  }, [])
-
-  return null
+  return (
+    <Script
+      id='cookieyes'
+      strategy='afterInteractive'
+      src='https://cdn-cookieyes.com/client_data/763724a18fa288293ea1f9a8/script.js'
+    />
+  )
 }
