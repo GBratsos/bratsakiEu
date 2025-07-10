@@ -91,14 +91,14 @@ const podcastData = [
     description2:
       "Alfie is a friend and competitor of il Mostro. The two friends and their crews made their first appearance together on the special stages of the historic rallies. So let's find out more details about Alfie and his crew.",
   },
-  // {
-  //   title: 'What Is a Track Day and Why Should You Try It at Least Once?',
-  //   image: '/bratsaki-track-day.webp',
-  //   description:
-  //     'Learn what a track day is, how to participate, what you need, and where track days take place in Greece.',
-  //   description2:
-  //     "Have you heard the term track day but don't know exactly what it is or how to participate? You're in the right place! In this guide, you'll learn what a track day is, how it works, who takes part, and why it's worth experiencing - especially if you love driving or motorsport.",
-  // },
+  {
+    title: 'What Is a Track Day and Why Should You Try It at Least Once?',
+    image: '/bratsaki-track-day.webp',
+    description:
+      'Learn what a track day is, how to participate, what you need, and where track days take place in Greece.',
+    description2:
+      "Have you heard the term track day but don't know exactly what it is or how to participate? You're in the right place! In this guide, you'll learn what a track day is, how it works, who takes part, and why it's worth experiencing - especially if you love driving or motorsport.",
+  },
 ]
 
 export default podcastData
