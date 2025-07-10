@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
       <meta name='facebook-domain-verification' content='3rxkbhtgwmm0w4pmcatgkd13kvzt19' />
       <Script
         id='cookieyes'
-        strategy='beforeInteractive'
+        strategy='afterInteractive'
         src='https://cdn-cookieyes.com/client_data/763724a18fa288293ea1f9a8/script.js'
       />
 
