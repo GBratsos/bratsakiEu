@@ -61,8 +61,7 @@ export default function Podcasts({ podcastData }) {
               </div>
               <div>
                 <h2 className='mb-4 text-xl font-bold text-black'>{podcast.title}</h2>
-                <h3 className='mb-4 text-black'>{podcast.description}</h3>
-                {podcast.description2 && <p className='text-black'>{podcast.description2}</p>}
+                <p className='mb-4 text-black'>{podcast.description}</p>
               </div>
               <div className='md:border-red mt-4 md:border-t-4'>
                 <h4 className='my-4 text-xl font-bold text-black'>Listen Now</h4>
