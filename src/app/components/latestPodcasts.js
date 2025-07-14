@@ -17,7 +17,7 @@ const container = {
 const podcastVariants = {
   offscreen: {
     opacity: 0,
-    y: 20,
+    y: 10,
   },
   onscreen: {
     opacity: 1,
