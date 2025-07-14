@@ -17,7 +17,7 @@ const container = {
 const podcastVariants = {
   offscreen: {
     opacity: 0,
-    y: 10,
+    y: 20,
   },
   onscreen: {
     opacity: 1,
@@ -41,7 +41,7 @@ export default function Podcasts({ podcastData }) {
           initial='offscreen'
           whileInView='onscreen'
           variants={container}
-          viewport={{ amount: 0.2, once: true }}
+          viewport={{ amount: 0.1, once: true }}
         >
           {podcastData?.map((podcast) => (
             <motion.article
