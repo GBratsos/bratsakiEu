@@ -1,22 +1,9 @@
 export default function sitemap() {
+  const lastModified = new Date()
   return [
-    {
-      url: 'https://bratsaki.eu',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
-    {
-      url: 'https://bratsaki.eu/biography',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://bratsaki.eu/podcast',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
+    { url: 'https://bratsaki.eu', lastModified, changeFrequency: 'monthly', priority: 1 },
+    { url: 'https://bratsaki.eu/biography', lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://bratsaki.eu/podcast', lastModified, changeFrequency: 'monthly', priority: 1 },
+    { url: 'https://bratsaki.eu/llms.txt', lastModified, changeFrequency: 'monthly', priority: 0.2 },
   ]
 }
