@@ -77,6 +77,18 @@ const podcastData = [
     description:
       "Learn what a track day is, how to participate, what you need, and where track days take place in Greece. Have you heard the term 'track day' but don't know exactly what it is or how to participate? You're in the right place! In this guide, you'll discover what a track day is, how it works, who takes part, and why it's worth experiencing—especially if you love driving or motorsport.",
   },
+  {
+    title: 'The Best Simracing Games for Beginners',
+    image: '/bratsaki-simracing-games-beginners.webp',
+    description:
+      "Do you want to get into simracing but don't know which game to start with? In this episode of Pedal to the metal without tomorrow I recommend the best simracing games for beginners, based on my experience. If you are new to simracing in Greece and want to know which game is best for you, this episode is the ideal guide to get you started.",
+  },
+  // {
+  //   title: "Simracing Setup - Beginner's Guide",
+  //   image: '/bratsaki-diy-simracing.webp',
+  //   description:
+  //     "Do you want to get into simracing but don't know where to start? In this episode of Pelad to the metal without tomorrow I show you how to build your first DIY simracing setup without spending a fortune.",
+  // },
 ]
 
 export default podcastData
