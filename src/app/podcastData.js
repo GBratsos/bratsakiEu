@@ -83,12 +83,12 @@ const podcastData = [
     description:
       "Do you want to get into simracing but don't know which game to start with? In this episode of Pedal to the metal without tomorrow I recommend the best simracing games for beginners, based on my experience. If you are new to simracing in Greece and want to know which game is best for you, this episode is the ideal guide to get you started.",
   },
-  // {
-  //   title: "Simracing Setup - Beginner's Guide",
-  //   image: '/bratsaki-diy-simracing.webp',
-  //   description:
-  //     "Do you want to get into simracing but don't know where to start? In this episode of Pelad to the metal without tomorrow I show you how to build your first DIY simracing setup without spending a fortune.",
-  // },
+  {
+    title: "Simracing Setup - Beginner's Guide",
+    image: '/bratsaki-diy-simracing.webp',
+    description:
+      "Do you want to get into simracing but don't know where to start? In this episode of Pelad to the metal without tomorrow I show you how to build your first DIY simracing setup without spending a fortune.",
+  },
 ]
 
 export default podcastData
