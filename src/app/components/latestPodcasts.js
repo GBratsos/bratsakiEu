@@ -7,9 +7,9 @@ const container = {
   onscreen: {
     transition: {
       ease: 'easeInOut',
-      duration: 0.4,
-      delayChildren: 0.2,
-      staggerChildren: 0.2,
+      duration: 0.3,
+      delayChildren: 0.15,
+      staggerChildren: 0.15,
     },
   },
 }
@@ -37,25 +37,25 @@ export default function Podcasts({ podcastData }) {
         <h2 className='mb-8 text-3xl font-bold text-blue-100 lg:mb-[40px] lg:text-5xl'>Latest Podcast Episodes</h2>
 
         <motion.div
-          className='grid gap-8 lg:grid-cols-3'
+          className='flex flex-col gap-8'
           initial='offscreen'
           whileInView='onscreen'
           variants={container}
-          viewport={{ amount: 0.1, once: true }}
+          viewport={{ amount: 0, once: true }}
         >
           {podcastData?.map((podcast) => (
             <motion.article
               key={podcast.title}
               variants={podcastVariants}
-              className='podcast-card hover:border-red relative grid-flow-col rounded-3xl border-8 bg-white px-6 py-4'
+              className='podcast-card hover:border-red rounded-3xl border-8 bg-white p-4 md:px-6 md:py-4 lg:flex lg:items-center lg:gap-6'
             >
-              <div className='img-container mb-4 flex items-center justify-center'>
+              <div className='img-container mb-4 flex shrink-0 items-center justify-center'>
                 <Image
                   loading='lazy'
                   src={podcast.image}
-                  width={300}
-                  height={300}
-                  className='w-full md:w-[300px]'
+                  width={200}
+                  height={200}
+                  className='w-[200px]'
                   alt={podcast.title}
                 />
               </div>
@@ -63,7 +63,7 @@ export default function Podcasts({ podcastData }) {
                 <h2 className='mb-4 text-xl font-bold text-black'>{podcast.title}</h2>
                 <p className='mb-4 text-black'>{podcast.description}</p>
               </div>
-              <div className='md:border-red mt-4 md:border-t-4'>
+              <div className='border-red mt-4 border-t-4 lg:mt-0 lg:border-t-0 lg:border-l-4 lg:pl-4'>
                 <h4 className='my-4 text-xl font-bold text-black'>Listen Now</h4>
                 <PodcastLinks />
               </div>

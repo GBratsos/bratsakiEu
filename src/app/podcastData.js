@@ -89,6 +89,12 @@ const podcastData = [
     description:
       "Do you want to get into simracing but don't know where to start? In this episode of Pelad to the metal without tomorrow I show you how to build your first DIY simracing setup without spending a fortune.",
   },
+  {
+    title: 'Simracivg Real Racing - Can you become a racing driver from gaming?',
+    image: '/bratsaki-simracing-real-racing.webp',
+    description:
+      'Can you become a racing driver starting from simracing? In this episode of the RallyDiaries Podcast we look at the similarities and differences between simracing and real racing, and how some drivers made the leap from gaming to the real track.',
+  },
 ]
 
 export default podcastData
