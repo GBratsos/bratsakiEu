@@ -93,7 +93,13 @@ const podcastData = [
     title: 'Simracing vs Real Racing - Can you become a racing driver from gaming?',
     image: '/bratsaki-simracing-real-racing.webp',
     description:
-      'Can you become a racing driver starting from simracing? In this episode of the RallyDiaries Podcast we look at the similarities and differences between simracing and real racing, and how some drivers made the leap from gaming to the real track.',
+      'Can you become a racing driver starting from simracing? In this episode of Pedal to the Metal without tomorrow we look at the similarities and differences between simracing and real racing, and how some drivers made the leap from gaming to the real track.',
+  },
+  {
+    title: 'Simracing vs Real Racing - Can you become a racing driver from gaming?',
+    image: '/bratsaki-cer-wrc.webp',
+    description:
+      'In this episode of Pedal to the Metal without tomorrow, we share our first trip to the Central European Rally, one of the newest and most exciting rounds of the WRC. From the roar of the WRC cars on asphalt to the atmosphere around the stages, this is a rally fan’s dream come true.',
   },
 ]
 
