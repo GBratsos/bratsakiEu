@@ -96,10 +96,10 @@ const podcastData = [
       'Can you become a racing driver starting from simracing? In this episode of Pedal to the Metal without tomorrow we look at the similarities and differences between simracing and real racing, and how some drivers made the leap from gaming to the real track.',
   },
   {
-    title: 'Simracing vs Real Racing - Can you become a racing driver from gaming?',
+    title: 'Central European Rally 2025 | Pedal to the metal without tomorrow',
     image: '/bratsaki-cer-wrc.webp',
     description:
-      'In this episode of Pedal to the Metal without tomorrow, we share our first trip to the Central European Rally, one of the newest and most exciting rounds of the WRC. From the roar of the WRC cars on asphalt to the atmosphere around the stages, this is a rally fan’s dream come true.',
+      'We visited the WRC Central European Rally for the first time! The experience of seeing the WRC cars on the asphalt is unique! We talked about how we organized a long weekend to experience an asphalt WRC up close, what it&apos;s worth, what it costs, and what I would do again.',
   },
 ]
 
