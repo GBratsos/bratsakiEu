@@ -101,6 +101,12 @@ const podcastData = [
     description:
       'We visited the WRC Central European Rally for the first time! The experience of seeing the WRC cars on the asphalt is unique! We talked about how we organized a long weekend to experience an asphalt WRC up close, what it&apos;s worth, what it costs, and what I would do again.',
   },
+  {
+    title: 'Racing Psychology: The mind before the race | Pedal to the metal without tomorrow',
+    image: '/bratsaki-racing-psychology.webp',
+    description:
+      'In this episode of Pedal to the Metal without tomorrow, we explore the psychological aspects of racing. How do professional drivers prepare mentally for a race? What techniques do they use to stay focused and calm under pressure? Join us as we delve into the mind of a racer and discover the importance of mental strength in motorsport.',
+  },
 ]
 
 export default podcastData
