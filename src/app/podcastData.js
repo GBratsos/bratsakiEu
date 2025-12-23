@@ -114,9 +114,9 @@ const podcastData = [
       'Simracing is not just a hobby, it is a development tool. Learn how driving simulation improves concentration, reduces stress and cultivates discipline, patience and composure on and off the track.',
   },
   {
-    title: 'From WRC to SimRally: What&apos;s not working today',
+    title: "From WRC to SimRally: What's not working today",
     image: '/bratsaki-simrally-wrc.webp',
-    description: 'From WRC to simrally, we break down what&apos;s missing from today&apos;s rally experience. Why do circuit sims focus more on driver development? And can the 2027 WRC changes bring rally back to its roots?'
+    description: "From WRC to simrally, we break down what's missing from today's rally experience. Why do circuit sims focus more on driver development? And can the 2027 WRC changes bring rally back to its roots?"
   }
 ]
 
