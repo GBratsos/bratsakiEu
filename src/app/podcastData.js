@@ -117,6 +117,11 @@ const podcastData = [
     title: "From WRC to SimRally: What's not working today",
     image: '/bratsaki-simrally-wrc.webp',
     description: "From WRC to simrally, we break down what's missing from today's rally experience. Why do circuit sims focus more on driver development? And can the 2027 WRC changes bring rally back to its roots?"
+  },
+  {
+    title: "Rallye Monte-Carlo: Road trip, ice, and an experience of a lifetime",
+    image: '/bratsaki-monte-carlo.webp',
+    description: "From the Milan-Gap roadtrip and the first glimpses of snow, to the night stages, the ice at Luceram and the legendary Col de Turini, we experienced firsthand what makes Monte-Carlo unique: the ever-changing conditions and adrenaline at its absolute limit."
   }
 ]
 
