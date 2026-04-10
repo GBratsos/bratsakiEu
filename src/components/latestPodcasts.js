@@ -30,6 +30,17 @@ const podcastVariants = {
   },
 }
 
+// Helper function to format date
+function formatDate(dateStr) {
+  // dateStr format: "05/12/2024" (DD/MM/YYYY)
+  const [day, month, year] = dateStr.split('/')
+  return new Date(year, month - 1, day).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  })
+}
+
 export default function Podcasts({ podcastData }) {
   return (
     <section className='news-section gradient-bg py-8 lg:py-16' id='news'>
@@ -65,7 +76,7 @@ export default function Podcasts({ podcastData }) {
               </div>
               <div className='border-red mt-4 border-t-4 lg:mt-0 lg:border-t-0 lg:border-l-4 lg:pl-4'>
                 <h4 className='my-4 text-xl font-bold text-black'>Listen Now</h4>
-                <PodcastLinks />
+                <PodcastLinks spotifyUrl={podcast.spotifyUrl} />
               </div>
             </motion.article>
           ))}

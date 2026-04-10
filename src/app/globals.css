@@ -79,6 +79,20 @@
   scroll-behavior: smooth;
 }
 
+:focus-visible {
+  outline: 3px solid var(--color-blue-100);
+  outline-offset: 4px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-blue-100);
+  outline-offset: 4px;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
 }
@@ -86,6 +100,15 @@ body {
 footer,
 .gradient-bg {
   background: linear-gradient(323deg, rgba(3, 3, 3, 1) 0%, rgba(1, 21, 42, 1) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .arrow-down {

@@ -33,6 +33,24 @@ const articleVariants = {
   },
 }
 
+function decodeHtmlEntities(text) {
+  if (typeof window === 'undefined') {
+    // Server-side: use regex-based decoding
+    return text
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/&apos;/g, "'")
+  } else {
+    // Client-side: use DOM method
+    const textarea = document.createElement('textarea')
+    textarea.innerHTML = text
+    return textarea.value
+  }
+}
+
 export default function LatestNews({ data }) {
   return (
     <section className='news-section gradient-bg py-8 lg:py-16' id='news'>
@@ -74,19 +92,18 @@ export default function LatestNews({ data }) {
                     width='720'
                     height='372'
                     src={`https://rallydiaries.eu${post.field_media_image}`}
-                    alt={post.title}
-                    typeof='foaf:Image'
+                    alt={decodeHtmlEntities(post.title)}
                     className='rounded-t-2xl'
                   />
                 </picture>
               </div>
               <section className='px-6 py-4'>
-                <h2 className='mb-4 max-h-13 text-xl font-bold text-black'>
-                  <a href={post.view_node} target='_blank' rel='noopener noreferrer' aria-label={post.title}>
-                    {post.title}
+                <h2 className='mb-4 text-xl font-bold text-black'>
+                  <a href={post.view_node} target='_blank' rel='noopener noreferrer' aria-label={decodeHtmlEntities(post.title)}>
+                    {decodeHtmlEntities(post.title)}
                   </a>
                 </h2>
-                <p className='text-black'>{post.body}</p>
+                <p className='text-black'>{decodeHtmlEntities(post.body)}</p>
               </section>
             </motion.article>
           ))}

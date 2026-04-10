@@ -2,13 +2,13 @@ import Link from 'next/link'
 import { faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default function PodcastLinks({ color, hoverColor }) {
+export default function PodcastLinks({ spotifyUrl, color, hoverColor }) {
   return (
     <nav className='socials mx-auto grid w-[130px] grid-cols-2 grid-rows-1 gap-y-8'>
       {[
         [
           faSpotify,
-          'https://open.spotify.com/show/23Y69tbd94gl4kowOhdNoq?si=019ca8c912744513',
+          spotifyUrl || 'https://open.spotify.com/show/23Y69tbd94gl4kowOhdNoq?si=019ca8c912744513',
           'Spotify',
           'text-green',
         ],

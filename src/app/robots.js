@@ -7,16 +7,12 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: '/private/',
+        disallow: ['/private/', '/admin/'],
       },
-      {
-        userAgent: '*',
-        allow: '/llms.txt',
-      },
-      { userAgent: 'GPTBot', allow: '/', disallow: ['/private/'] },
-      { userAgent: 'CCBot', allow: '/', disallow: ['/private/', '/images/'] },
-      { userAgent: 'ClaudeBot', allow: '/', disallow: ['/private/'] },
-      { userAgent: 'PerplexityBot', allow: '/', disallow: ['/private/'] },
+      // { userAgent: 'GPTBot', disallow: '/' },
+      // { userAgent: 'CCBot', disallow: '/' },
+      // { userAgent: 'ClaudeBot', disallow: '/' },
+      // { userAgent: 'PerplexityBot', disallow: '/' },
     ],
     sitemap: 'https://bratsaki.eu/sitemap.xml',
   }

@@ -3,7 +3,7 @@
 import { faBars, faClose, faNewspaper, faPodcast, faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import SocialMedia from './socialMedia'
 import { motion } from 'framer-motion'
 
@@ -31,10 +31,74 @@ const opacityVariant = {
 
 export default function Menu() {
   const [isOpened, setIsOpened] = useState(false)
+  const menuRef = useRef(null)
+  const openButtonRef = useRef(null)
+  const closeButtonRef = useRef(null)
+
+  useEffect(() => {
+    if (!isOpened || !menuRef.current) return
+
+    const focusableSelectors = [
+      'button:not([disabled])',
+      'a[href]',
+      'input:not([disabled])',
+      'textarea:not([disabled])',
+      'select:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])',
+    ].join(', ')
+
+    const focusableElements = Array.from(menuRef.current.querySelectorAll(focusableSelectors))
+    const firstElement = focusableElements[0]
+    const lastElement = focusableElements[focusableElements.length - 1]
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsOpened(false)
+        openButtonRef.current?.focus()
+        return
+      }
+
+      if (event.key !== 'Tab') return
+
+      if (focusableElements.length === 0) {
+        event.preventDefault()
+        return
+      }
+
+      if (event.shiftKey) {
+        if (document.activeElement === firstElement) {
+          event.preventDefault()
+          lastElement.focus()
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          event.preventDefault()
+          firstElement.focus()
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    firstElement?.focus()
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isOpened])
 
   return (
     <section className='menu-section relative z-20 flex items-center pt-[30px] lg:pt-[40px] 2xl:static'>
-      <FontAwesomeIcon icon={faBars} size='2x' className='mr-8 cursor-pointer' onClick={() => setIsOpened(!isOpened)} />
+      <button
+        ref={openButtonRef}
+        type='button'
+        aria-label={isOpened ? 'Close menu' : 'Open menu'}
+        aria-expanded={isOpened}
+        aria-controls='nav-menu'
+        className='mr-8 inline-flex items-center justify-center rounded-full border-2 border-transparent p-2 text-white hover:border-white focus:outline-none focus-visible:border-blue-100'
+        onClick={() => setIsOpened(!isOpened)}
+      >
+        <FontAwesomeIcon icon={isOpened ? faClose : faBars} size='2x' />
+      </button>
       <Link href='/' aria-label='home'>
         <svg xmlns='http://www.w3.org/2000/svg' width='136' height='61' viewBox='0 0 136 61' fill='none'>
           <path
@@ -76,18 +140,41 @@ export default function Menu() {
         </svg>
       </Link>
 
-      <div
-        className={`gradient-bg bg-opacity-75 fixed top-0 left-0 z-50 h-full w-0 overflow-hidden backdrop-blur-lg transition-all duration-300 ${isOpened ? 'w-[300px] lg:w-[360px]' : 'w-[0]'}`}
+      <motion.div
+        id='nav-menu'
+        role='navigation'
+        aria-label='Main menu'
+        aria-hidden={!isOpened}
+        ref={menuRef}
+        initial={false}
+        animate={isOpened ? 'open' : 'closed'}
+        variants={{
+          open: {
+            x: 0,
+            opacity: 1,
+            pointerEvents: 'auto',
+            transition: { duration: 0.2, ease: 'easeInOut' },
+          },
+          closed: {
+            x: '-100%',
+            opacity: 0,
+            pointerEvents: 'none',
+            transition: { duration: 0.2, ease: 'easeInOut' },
+          },
+        }}
+        className='gradient-bg bg-opacity-75 fixed top-0 left-0 z-50 h-full w-[300px] lg:w-[360px] overflow-hidden backdrop-blur-lg'
       >
         <div className='flex h-full w-full flex-col items-end justify-between px-6 py-8'>
           <div className='flex w-full flex-col items-end'>
-            <FontAwesomeIcon
-              icon={faClose}
+            <button
+              ref={closeButtonRef}
+              type='button'
+              aria-label='Close menu'
+              className='z-30 inline-flex items-center justify-center rounded-full border-2 border-transparent p-2 text-white hover:border-white focus:outline-none focus-visible:border-blue-100'
               onClick={() => setIsOpened(false)}
-              className='z-30 cursor-pointer'
-              size='2x'
-              id='closeButton'
-            />
+            >
+              <FontAwesomeIcon icon={faClose} size='2x' />
+            </button>
 
             <motion.div
               variants={container}
@@ -118,7 +205,7 @@ export default function Menu() {
             <SocialMedia />
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

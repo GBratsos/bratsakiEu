@@ -1,8 +1,8 @@
-import Gallery from './components/gallery'
-import HomeContent from './components/homeContent'
-import LatestNews from './components/latestNews'
-import Podcast from './components/podcast'
-import Simracing from './components/simracing'
+import Gallery from '../components/gallery'
+import HomeContent from '../components/homeContent'
+import LatestNews from '../components/latestNews'
+import Podcast from '../components/podcast'
+import Simracing from '../components/simracing'
 
 async function getData() {
   const res = await fetch('https://rallydiaries.eu/en/rest/articles/bratsaki')
@@ -15,10 +15,120 @@ async function getData() {
   return res.json()
 }
 
+export const metadata = {
+  alternates: {
+    canonical: 'https://bratsaki.eu',
+  },
+  title: 'George Bratsos - Simracer & Rally Driver',
+  description:
+    'Greek simracer and rally driver promoting motorsport through online content and racing activities.',
+  openGraph: {
+    title: 'George Bratsos - Simracer & Rally Driver',
+    description:
+      'Greek simracer and rally driver promoting motorsport through online content and racing activities.',
+    url: 'https://bratsaki.eu',
+    siteName: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
+    images: [
+      {
+        url: 'https://bratsaki.eu/bratsakifb.jpg',
+        alt: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
+    description:
+      'George Bratsos is a Greek simracer & rally driver. He promotes motorsport in Greece, through his online content and motorsport activities. From simracing to real rallies.',
+    images: ['https://bratsaki.eu/bratsakifb.jpg'],
+  },
+}
+
+function parsePublishedDate(dateString) {
+  if (!dateString) return null
+
+  if (/^\d{2}\/\d{2}\/\d{4}$/.test(dateString)) {
+    const [day, month, year] = dateString.split('/')
+    return `${year}-${month}-${day}`
+  }
+
+  const parsed = new Date(dateString)
+  if (!Number.isNaN(parsed.getTime())) {
+    return parsed.toISOString().split('T')[0]
+  }
+
+  return null
+}
+
+function buildArticleSchema(posts) {
+  return posts
+    .map((post) => {
+      const publishedDate =
+        parsePublishedDate(post.date) ||
+        parsePublishedDate(post.publishedDate) ||
+        parsePublishedDate(post.published_date) ||
+        parsePublishedDate(post.created) ||
+        parsePublishedDate(post.changed) ||
+        parsePublishedDate(post.published_at)
+
+      const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: post.title,
+        image: `https://rallydiaries.eu${post.field_media_image}`,
+        url: post.view_node,
+        description: post.body,
+        articleBody: post.body,
+        author: {
+          '@type': 'Person',
+          name: 'George Bratsos',
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': post.view_node,
+        },
+      }
+
+      if (publishedDate) {
+        schema.datePublished = publishedDate
+      }
+
+      return schema
+    })
+    .filter(Boolean)
+}
+
 export default async function Home() {
   const data = await getData()
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'George Bratsos - Simracer & Rally Driver',
+      description: 'Greek simracer and rally driver promoting motorsport through online content and racing activities.',
+      url: 'https://bratsaki.eu',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://bratsaki.eu/search?q={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    ...buildArticleSchema(data),
+  ]
+
   return (
     <>
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+      <h1 className='sr-only'>George Bratsos - Simracer & Rally Driver</h1>
       <HomeContent />
       <Simracing />
       <Podcast />

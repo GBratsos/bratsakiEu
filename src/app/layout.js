@@ -1,34 +1,17 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Footer from './components/footer'
-import Rallydiaries from './components/rallydiaries'
-import BorderColor from './components/borderColor'
-import CookieYesLoader from './components/cookieYes'
-import GTM from './components/GTM'
+import Footer from '../components/footer'
+import Rallydiaries from '../components/rallydiaries'
+import BorderColor from '../components/borderColor'
+import CookieYesLoader from '../components/cookieYes'
+import GTM from '../components/GTM'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-sans' })
 
 export const metadata = {
-  alternates: {
-    canonical: 'https://bratsaki.eu',
-  },
-  title: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
+  title: 'George Bratsos - Simracer & Rally Driver',
   description:
-    'George Bratsos is a Greek simracer & rally driver. He promotes motorsport in Greece, through his online content and motorsport activities. From simracing to real rallies.',
-  keywords: [
-    'George Bratsos',
-    'Simracing Greece',
-    'Simracer',
-    'Greek motorsport',
-    'Rally driver Greece',
-    'Content Creator motorsports',
-    'Bratsaki',
-    'Sim to real',
-    'Motorsport Greece',
-    'simracing',
-    'peugeot 205',
-    'rally driver',
-  ],
+    'Greek simracer and rally driver promoting motorsport through online content and racing activities.',
   openGraph: {
     title: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
     description:
@@ -46,22 +29,62 @@ export const metadata = {
     locale: 'en_US',
     type: 'website',
   },
-  icons: {
-    icon: '/favicons/favicon.ico',
-    shortcut: '/favicons/favicon-96x96.png',
-    apple: '/favicons/apple-icon.png',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/favicons//apple-icon-precomposed.png',
-    },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
+    description:
+      'George Bratsos is a Greek simracer & rally driver. He promotes motorsport in Greece, through his online content and motorsport activities. From simracing to real rallies.',
+    images: ['https://bratsaki.eu/bratsakifb.jpg'],
   },
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <meta charSet='utf-8' />
-      <meta name='facebook-domain-verification' content='3rxkbhtgwmm0w4pmcatgkd13kvzt19' />
+      <head>
+        <meta charSet='utf-8' />
+        <meta name='facebook-domain-verification' content='3rxkbhtgwmm0w4pmcatgkd13kvzt19' />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://bratsaki.eu',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'George Bratsos',
+            alternateName: 'Bratsaki',
+            description: 'Greek simracer and rally driver, content creator promoting motorsport in Greece',
+            url: 'https://bratsaki.eu',
+            image: 'https://bratsaki.eu/bratsaki.webp',
+            sameAs: [
+              'https://www.instagram.com/bratsaki/',
+              'https://www.youtube.com/rallydiaries',
+              'https://www.tiktok.com/@geobratsos',
+              'https://twitch.tv/bratsaki',
+            ],
+            knowsAbout: ['Simracing', 'Rally Driving', 'Motorsport', 'Content Creation'],
+            jobTitle: 'Simracer and Rally Driver',
+            nationality: 'Greek',
+          }),
+        }}
+      />
+      </head>
       <body className={`${inter.variable} font-sans`}>
         <noscript>
           <iframe
