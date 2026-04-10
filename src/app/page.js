@@ -64,9 +64,26 @@ function parsePublishedDate(dateString) {
   return null
 }
 
+function normalizeUrl(url) {
+  if (!url) return null
+  if (url.startsWith('//')) return `https:${url}`
+  if (url.startsWith('http://')) return url.replace(/^http:/, 'https:')
+  if (url.startsWith('https://')) return url
+  return `https://rallydiaries.eu${url}`
+}
+
+function stripHtml(text) {
+  if (!text) return ''
+  return text.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
+}
+
 function buildArticleSchema(posts) {
   return posts
     .map((post) => {
+      const url = normalizeUrl(post.view_node)
+      const image = normalizeUrl(post.field_media_image)
+      const description = stripHtml(post.body) || post.title
+      const articleBody = stripHtml(post.body)
       const publishedDate =
         parsePublishedDate(post.date) ||
         parsePublishedDate(post.publishedDate) ||
@@ -74,27 +91,38 @@ function buildArticleSchema(posts) {
         parsePublishedDate(post.created) ||
         parsePublishedDate(post.changed) ||
         parsePublishedDate(post.published_at)
+      const modifiedDate = parsePublishedDate(post.changed) || parsePublishedDate(post.updated)
+
+      if (!url) return null
 
       const schema = {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': url,
+        },
         headline: post.title,
-        image: `https://rallydiaries.eu${post.field_media_image}`,
-        url: post.view_node,
-        description: post.body,
-        articleBody: post.body,
+        description,
         author: {
           '@type': 'Person',
           name: 'George Bratsos',
         },
-        mainEntityOfPage: {
-          '@type': 'WebPage',
-          '@id': post.view_node,
-        },
+        inLanguage: 'el-GR',
+        url,
       }
 
+      if (image) {
+        schema.image = image
+      }
+      if (articleBody) {
+        schema.articleBody = articleBody
+      }
       if (publishedDate) {
         schema.datePublished = publishedDate
+      }
+      if (modifiedDate) {
+        schema.dateModified = modifiedDate
       }
 
       return schema
