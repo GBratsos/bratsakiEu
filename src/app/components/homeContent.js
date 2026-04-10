@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Menu from './menu'
 import { motion } from 'framer-motion'
-import { Tilt } from 'react-next-tilt'
+import TiltCard from './tiltCard';
 
 const container = {
   hidden: { opacity: 0 },
@@ -39,17 +39,7 @@ export default function HomeContent() {
       animate='show'
     >
       <motion.div variants={opacityVariant} className='absolute top-0 right-0 bottom-0 left-[40%] lg:left-auto'>
-        <Tilt
-          borderRadius={0}
-          spotGlareEnable={false}
-          lineGlareEnable={false}
-          aria-hidden='true'
-          scale={1}
-          tiltReverse={false}
-          tiltMaxAngleX={3}
-          tiltMaxAngleY={3}
-          preserve3dEnable={false}
-        >
+        <TiltCard>
           <div className='hidden lg:block'>
             <Image
               src='/georgebratsos.webp'
@@ -57,10 +47,10 @@ export default function HomeContent() {
               width={934}
               height={1387}
               priority
-              className='object-cover'
+              className='object-cover [transform:translateZ(20px)]'
             />
           </div>
-        </Tilt>
+        </TiltCard>
         <Image
           src='/georgebratsos.webp'
           alt='George Bratsos aka Bratsaki'

@@ -1,4 +1,6 @@
 // app/robots.ts (ή robots.js αν θες JS)
+export const dynamic = 'force-static';
+
 export default function robots() {
   return {
     rules: [

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Menu from '../components/menu'
 import { motion } from 'framer-motion'
-import { Tilt } from 'react-next-tilt'
+import TiltCard from '../components/tiltCard'
 import Podcast from '../components/podcast'
 
 const container = {
@@ -64,17 +64,7 @@ export default function Biography() {
           variants={topOpacityVariant}
           className='absolute top-0 right-[-128px] bottom-0 md:right-0 lg:left-auto'
         >
-          <Tilt
-            borderRadius={0}
-            spotGlareEnable={false}
-            lineGlareEnable={false}
-            aria-hidden='true'
-            scale={1}
-            tiltReverse={false}
-            tiltMaxAngleX={3}
-            tiltMaxAngleY={3}
-            preserve3dEnable={false}
-          >
+          <TiltCard>
             <div className='hidden lg:block'>
               <Image
                 src='/bratsaki.webp'
@@ -85,7 +75,7 @@ export default function Biography() {
                 className='object-cover'
               />
             </div>
-          </Tilt>
+          </TiltCard>
           <Image
             src='/bratsaki.webp'
             alt='George Bratsos'
