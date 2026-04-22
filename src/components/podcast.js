@@ -87,7 +87,7 @@ export default function Podcast() {
                 <FontAwesomeIcon
                   icon={faAngleRight}
                   size='3x'
-                  className='invinsible absolute top-[13px] right-[30px] opacity-0 lg:ms-4'
+                  className='invisible absolute top-[13px] right-[30px] opacity-0 lg:ms-4'
                 />
               </Link>
             </motion.div>

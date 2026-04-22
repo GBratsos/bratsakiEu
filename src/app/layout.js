@@ -10,8 +10,7 @@ const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-san
 
 export const metadata = {
   title: 'George Bratsos - Simracer & Rally Driver',
-  description:
-    'Greek simracer and rally driver promoting motorsport through online content and racing activities.',
+  description: 'Greek simracer and rally driver promoting motorsport through online content and racing activities.',
   openGraph: {
     title: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
     description:
@@ -29,6 +28,7 @@ export const metadata = {
     locale: 'en_US',
     type: 'website',
   },
+  metadataBase: new URL('https://bratsaki.eu'),
   twitter: {
     card: 'summary_large_image',
     title: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
@@ -44,46 +44,52 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet='utf-8' />
         <meta name='facebook-domain-verification' content='3rxkbhtgwmm0w4pmcatgkd13kvzt19' />
-      <script
-        type='application/ld+json'
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              {
-                '@type': 'ListItem',
-                position: 1,
-                name: 'Home',
-                item: 'https://bratsaki.eu',
-              },
-            ],
-          }),
-        }}
-      />
-      <script
-        type='application/ld+json'
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Person',
-            name: 'George Bratsos',
-            alternateName: 'Bratsaki',
-            description: 'Greek simracer and rally driver, content creator promoting motorsport in Greece',
-            url: 'https://bratsaki.eu',
-            image: 'https://bratsaki.eu/bratsaki.webp',
-            sameAs: [
-              'https://www.instagram.com/bratsaki/',
-              'https://www.youtube.com/rallydiaries',
-              'https://www.tiktok.com/@geobratsos',
-              'https://twitch.tv/bratsaki',
-            ],
-            knowsAbout: ['Simracing', 'Rally Driving', 'Motorsport', 'Content Creation'],
-            jobTitle: 'Simracer and Rally Driver',
-            nationality: 'Greek',
-          }),
-        }}
-      />
+        <link rel='preconnect' href='https://rallydiaries.eu' crossOrigin='anonymous' />
+        <link rel='dns-prefetch' href='https://rallydiaries.eu' />
+        <link rel='preconnect' href='https://www.googletagmanager.com' crossOrigin='anonymous' />
+        <link rel='dns-prefetch' href='https://www.googletagmanager.com' />
+        <link rel='preconnect' href='https://cdn-cookieyes.com' crossOrigin='anonymous' />
+        <link rel='dns-prefetch' href='https://cdn-cookieyes.com' />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://bratsaki.eu',
+                },
+              ],
+            }),
+          }}
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'George Bratsos',
+              alternateName: 'Bratsaki',
+              description: 'Greek simracer and rally driver, content creator promoting motorsport in Greece',
+              url: 'https://bratsaki.eu',
+              image: 'https://bratsaki.eu/bratsaki.webp',
+              sameAs: [
+                'https://www.instagram.com/bratsaki/',
+                'https://www.youtube.com/rallydiaries',
+                'https://www.tiktok.com/@geobratsos',
+                'https://twitch.tv/bratsaki',
+              ],
+              knowsAbout: ['Simracing', 'Rally Driving', 'Motorsport', 'Content Creation'],
+              jobTitle: 'Simracer and Rally Driver',
+              nationality: 'Greek',
+            }),
+          }}
+        />
       </head>
       <body className={`${inter.variable} font-sans`}>
         <noscript>

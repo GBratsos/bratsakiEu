@@ -20,12 +20,10 @@ export const metadata = {
     canonical: 'https://bratsaki.eu',
   },
   title: 'George Bratsos - Simracer & Rally Driver',
-  description:
-    'Greek simracer and rally driver promoting motorsport through online content and racing activities.',
+  description: 'Greek simracer and rally driver promoting motorsport through online content and racing activities.',
   openGraph: {
     title: 'George Bratsos - Simracer & Rally Driver',
-    description:
-      'Greek simracer and rally driver promoting motorsport through online content and racing activities.',
+    description: 'Greek simracer and rally driver promoting motorsport through online content and racing activities.',
     url: 'https://bratsaki.eu',
     siteName: 'George Bratsos | Simracer - Content Creator - Motorsports Driver (in the making)',
     images: [
@@ -74,7 +72,16 @@ function normalizeUrl(url) {
 
 function stripHtml(text) {
   if (!text) return ''
-  return text.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
+  return text
+    .replace(/<[^>]+>/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function truncate(text, max) {
+  if (!text) return text
+  if (text.length <= max) return text
+  return `${text.slice(0, max - 1).trimEnd()}…`
 }
 
 function buildArticleSchema(posts) {
@@ -82,8 +89,7 @@ function buildArticleSchema(posts) {
     .map((post) => {
       const url = normalizeUrl(post.view_node)
       const image = normalizeUrl(post.field_media_image)
-      const description = stripHtml(post.body) || post.title
-      const articleBody = stripHtml(post.body)
+      const description = truncate(stripHtml(post.body) || post.title, 250)
       const publishedDate =
         parsePublishedDate(post.date) ||
         parsePublishedDate(post.publishedDate) ||
@@ -102,21 +108,27 @@ function buildArticleSchema(posts) {
           '@type': 'WebPage',
           '@id': url,
         },
-        headline: post.title,
+        headline: truncate(post.title, 110),
         description,
         author: {
           '@type': 'Person',
           name: 'George Bratsos',
+          url: 'https://bratsaki.eu',
         },
-        inLanguage: 'el-GR',
+        publisher: {
+          '@type': 'Organization',
+          name: 'George Bratsos',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://bratsaki.eu/favicons/android-icon-192x192.png',
+          },
+        },
+        inLanguage: 'en-US',
         url,
       }
 
       if (image) {
         schema.image = image
-      }
-      if (articleBody) {
-        schema.articleBody = articleBody
       }
       if (publishedDate) {
         schema.datePublished = publishedDate
@@ -156,7 +168,6 @@ export default async function Home() {
           __html: JSON.stringify(structuredData),
         }}
       />
-      <h1 className='sr-only'>George Bratsos - Simracer & Rally Driver</h1>
       <HomeContent />
       <Simracing />
       <Podcast />

@@ -71,38 +71,27 @@ export default function LatestNews({ data }) {
               className='blogpost-card hover:border-red relative rounded-3xl border-8 bg-white'
             >
               <div className='img-container'>
-                <picture>
-                  <source
-                    srcSet={`https://rallydiaries.eu${post.field_media_image}`}
-                    media='(max-width: 500px)'
-                    type='image/webp'
-                  />
-                  <source
-                    srcSet={`https://rallydiaries.eu${post.field_media_image}`}
-                    media='(max-width: 850px)'
-                    type='image/webp'
-                  />
-                  <source
-                    srcSet={`https://rallydiaries.eu${post.field_media_image}`}
-                    media='(min-width: 851px)'
-                    type='image/webp'
-                  />
-                  <img
-                    loading='lazy'
-                    width='720'
-                    height='372'
-                    src={`https://rallydiaries.eu${post.field_media_image}`}
-                    alt={decodeHtmlEntities(post.title)}
-                    className='rounded-t-2xl'
-                  />
-                </picture>
+                <img
+                  loading='lazy'
+                  decoding='async'
+                  width='720'
+                  height='372'
+                  src={`https://rallydiaries.eu${post.field_media_image}`}
+                  alt={decodeHtmlEntities(post.title)}
+                  className='rounded-t-2xl'
+                />
               </div>
               <section className='px-6 py-4'>
-                <h2 className='mb-4 text-xl font-bold text-black'>
-                  <a href={post.view_node} target='_blank' rel='noopener noreferrer' aria-label={decodeHtmlEntities(post.title)}>
+                <h3 className='mb-4 text-xl font-bold text-black'>
+                  <a
+                    href={post.view_node}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label={decodeHtmlEntities(post.title)}
+                  >
                     {decodeHtmlEntities(post.title)}
                   </a>
-                </h2>
+                </h3>
                 <p className='text-black'>{decodeHtmlEntities(post.body)}</p>
               </section>
             </motion.article>
@@ -119,7 +108,7 @@ export default function LatestNews({ data }) {
             <FontAwesomeIcon
               icon={faAngleRight}
               size='3x'
-              className='invinsible absolute top-[13px] right-[30px] opacity-0 lg:ms-4'
+              className='invisible absolute top-[13px] right-[30px] opacity-0 lg:ms-4'
             />
           </Link>
         </div>
