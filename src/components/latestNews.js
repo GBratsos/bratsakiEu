@@ -82,7 +82,11 @@ export default function LatestNews({ data }) {
                 />
               </div>
               <section className='px-6 py-4'>
+<<<<<<< Updated upstream
                 <h3 className='mb-4 text-xl font-bold text-black'>
+=======
+                <h2 className='mb-4 text-xl font-bold text-black'>
+>>>>>>> Stashed changes
                   <a
                     href={post.view_node}
                     target='_blank'
@@ -108,7 +112,11 @@ export default function LatestNews({ data }) {
             <FontAwesomeIcon
               icon={faAngleRight}
               size='3x'
+<<<<<<< Updated upstream
               className='invisible absolute top-[13px] right-[30px] opacity-0 lg:ms-4'
+=======
+              className='invinsible absolute top-[13px] right-[15px] opacity-0 lg:ms-4'
+>>>>>>> Stashed changes
             />
           </Link>
         </div>
