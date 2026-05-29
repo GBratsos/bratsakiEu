@@ -107,11 +107,7 @@ export default function Gallery() {
             <FontAwesomeIcon
               icon={faAngleRight}
               size='3x'
-<<<<<<< Updated upstream
-              className='invisible absolute top-[13px] right-[30px] opacity-0 lg:ms-4'
-=======
-              className='invinsible absolute top-[13px] right-[15px] opacity-0 lg:ms-4'
->>>>>>> Stashed changes
+              className='invisible absolute top-[13px] right-[15px] opacity-0 lg:ms-4'
             />
           </Link>
         </div>
